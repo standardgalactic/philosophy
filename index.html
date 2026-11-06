@@ -1,541 +1,585 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Latent Structure</title>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ecce Flyxion | Lissajous</title>
 <style>
-*{box-sizing:border-box}
-
-html,body{
-  margin:0;width:100%;height:100%;overflow:hidden;
-  background:#000;color:#7cff7c;font-family:monospace;
-  touch-action:manipulation;
+:root {
+  color-scheme: dark;
+  --green: #9fffd4;
+  --dim: #568a78;
 }
-
-body{
-  display:flex;align-items:center;justify-content:center;
-  flex-direction:column;cursor:pointer;
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #020605;
+  color: #a8cbbb;
+  font-family: Consolas, 'Courier New', monospace;
+  overflow: hidden;
 }
-
-body::before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:500;
-  background:repeating-linear-gradient(to bottom,
-    rgba(255,255,255,.025) 0px,
-    rgba(255,255,255,.025) 1px,
-    transparent 2px,
-    transparent 6px);
-  opacity:.10;
+main {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: clamp(14px, 2.5vw, 32px);
 }
-
-.title{
-  position:fixed;top:16px;width:94vw;text-align:center;
-  font-size:12px;letter-spacing:.18em;text-transform:uppercase;
-  color:#88ddaa;text-shadow:0 0 8px #00aa55;z-index:100;
+canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
-
-.selector{
-  position:fixed;top:46px;display:flex;gap:8px;flex-wrap:wrap;
-  justify-content:center;width:96vw;z-index:120;cursor:default;
+main:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    #0005 4px
+  );
+  opacity: .3;
 }
-
-.selector button{
-  background:#000a04;border:1px solid rgba(0,200,80,.38);
-  color:#55cc88;padding:6px 10px;font-family:monospace;
-  font-size:9px;letter-spacing:.08em;cursor:pointer;
-  transition:background .2s,color .2s;
+header, footer {
+  position: relative;
+  z-index: 4;
 }
-
-.selector button.active{
-  background:#001f0d;color:#ccffdd;
-  box-shadow:0 0 6px #00aa44 inset;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 11px;
+  letter-spacing: .16em;
 }
-
-.status{
-  position:fixed;top:88px;opacity:.32;font-size:9px;
-  letter-spacing:.16em;color:#55aa77;z-index:120;
+a {
+  color: var(--green);
+  text-decoration: none;
 }
-
-canvas{
-  width:min(420px,80vw);height:min(420px,80vw);
-  border-radius:50%;border:1px solid rgba(0,200,80,.22);
-  background:#000;
-  box-shadow:0 0 40px rgba(0,180,80,.06) inset,
-             0 0 12px rgba(0,160,60,.22);
-  z-index:40;
+a:hover { text-decoration: underline; }
+.middle {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
 }
-
-.subs{
-  position:fixed;bottom:24px;width:min(660px,90vw);
-  min-height:2.4em;padding:8px 14px;text-align:center;
-  font-size:13px;line-height:1.5;color:#88ccaa;
-  text-shadow:0 0 5px #005533;background:rgba(0,12,6,.42);
-  border:1px solid rgba(0,180,80,.15);border-radius:4px;
-  pointer-events:none;z-index:80;
-  font-style:italic;letter-spacing:.02em;
+.title {
+  position: absolute;
+  text-align: center;
+  color: #c5ffe4;
+  text-shadow: 0 0 12px #52ffb277;
+  opacity: 1;
+  transition: opacity 3.5s ease;
+  letter-spacing: .17em;
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: clamp(27px, 6.5vw, 92px);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.15;
 }
-
-@media(max-width:700px){
-  .title{top:12px;font-size:10px}
-  .selector{top:40px}
-  .selector button{font-size:8px;padding:5px 7px}
-  .status{top:88px;font-size:8px}
-  .subs{bottom:16px;font-size:12px}
+.title small {
+  display: block;
+  font-size: clamp(10px, 1.25vw, 16px);
+  letter-spacing: .32em;
+  color: #84bfa5;
+  margin-top: 20px;
+}
+.title.hide { opacity: 0; }
+.caption {
+  position: absolute;
+  bottom: clamp(10px, 5vh, 60px);
+  width: min(850px, 94vw);
+  text-align: center;
+  font: clamp(15px, 1.8vw, 22px)/1.5
+        Consolas, 'Courier New', monospace;
+  color: #d7ffe8;
+  text-shadow: 0 0 10px #000, 0 0 20px #000;
+  min-height: 3em;
+}
+.panel {
+  border-top: 1px solid #41695880;
+  padding-top: 14px;
+  background: linear-gradient(transparent, #020605dd);
+  font-size: 11px;
+}
+.transport {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.transport button {
+  width: 42px;
+  height: 36px;
+  border: 1px solid #6ca98c;
+  background: #07120e;
+  color: var(--green);
+  cursor: pointer;
+  font-size: 18px;
+}
+.time {
+  white-space: nowrap;
+  color: #9db8ab;
+}
+input[type=range] {
+  accent-color: #8af0bb;
+  cursor: pointer;
+}
+.seek {
+  flex: 1;
+  min-width: 30px;
+}
+.volume { width: 80px; }
+.lower {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  color: var(--dim);
+  letter-spacing: .09em;
+}
+.lower button {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: var(--green);
+  font: inherit;
+  cursor: pointer;
+}
+.lower select {
+  background: #07120e;
+  color: var(--green);
+  border: 1px solid #416958;
+  padding: 4px;
+  font: inherit;
+  max-width: 260px;
+}
+#status { color: #8dc6a8; }
+@media(max-width:600px) {
+  .volume { display: none; }
+  .lower { font-size: 10px; }
+  .title { font-size: clamp(27px, 8vw, 54px); }
+  header { font-size: 9px; }
+  .caption { bottom: 18px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .title { transition: none; }
 }
 </style>
 </head>
-
 <body>
+<main>
+  <canvas id="scope"
+    aria-label="Audio reactive Lissajous oscilloscope">
+  </canvas>
 
-<div class="title" id="title">Latent Structure</div>
-<div class="selector" id="selector"></div>
-<div class="status">touch · click to play or pause</div>
-<canvas id="viz"></canvas>
-<div id="subs" class="subs"></div>
+  <header>
+    <span>FLYXION / PHILOSOPHY</span>
+    <a href="https://standardgalactic.github.io/philosophy/ecce-flyxion.pdf"
+       target="_blank" rel="noopener">
+      READ THE ESSAY PDF
+    </a>
+  </header>
 
-<audio id="audio" preload="auto"></audio>
+  <section class="middle">
+    <div class="title" id="title">
+      ECCE FLYXION
+      <small>A SELF-REFUTING PROPHECY</small>
+    </div>
+    <div class="caption" id="caption"></div>
+  </section>
+
+  <footer class="panel">
+    <div class="transport">
+      <button id="play" aria-label="Play">▶</button>
+      <span class="time" id="time">00:00 / 00:00</span>
+      <input class="seek" id="seek" type="range"
+             min="0" max="1000" value="0" aria-label="Seek">
+      <input class="volume" id="volume" type="range"
+             min="0" max="1" step=".01" value=".85"
+             aria-label="Volume">
+    </div>
+    <div class="lower">
+      <span id="status">READY</span>
+      <span>
+        <button id="cc">CAPTIONS ON</button>
+        &nbsp;·&nbsp;
+        <button id="copy">COPY LINK</button>
+      </span>
+      <select id="tracks" aria-label="Audio track"></select>
+    </div>
+  </footer>
+
+  <audio id="audio" preload="metadata"></audio>
+</main>
 
 <script>
-const tracks = [
-  {
-    file:"Reality_as_a_Structure_of_Accessible_Futures.mp3",
-    vtt:"Reality_as_a_Structure_of_Accessible_Futures.vtt",
-    label:"Futures",
-    title:"Reality as a Structure of Accessible Futures",
-    mode:"futures"
-  },
-  {
-    file:"The_death_of_the_uniform_object.mp3",
-    vtt:"The_death_of_the_uniform_object.vtt",
-    label:"Object",
-    title:"The Death of the Uniform Object",
-    mode:"object"
-  },
-  {
-    file:"Reconstructing_reality_through_latent_structure.mp3",
-    vtt:"Reconstructing_reality_through_latent_structure.vtt",
-    label:"Latent",
-    title:"Reconstructing Reality Through Latent Structure",
-    mode:"latent"
-  }
-];
+'use strict';
 
-let trackIndex = 0;
-let mode = tracks[0].mode;
+const $ = s => document.querySelector(s);
+const audio = $('#audio');
+const canvas = $('#scope');
+const ctx = canvas.getContext('2d');
+const title = $('#title');
+const caption = $('#caption');
+const status = $('#status');
+const play = $('#play');
+const seek = $('#seek');
+const time = $('#time');
 
-const audio    = document.getElementById("audio");
-const subs     = document.getElementById("subs");
-const titleEl  = document.getElementById("title");
-const selector = document.getElementById("selector");
+const tracks = ['A_Self-Refuting_Prophecy.mp3'];
+const params = new URLSearchParams(location.search);
+const selected = tracks.includes(params.get('track'))
+  ? params.get('track') : tracks[0];
 
-let audioCtx, analyser, freqData, timeData;
+let cues = [], captions = true, analyser = null;
+let wave = null, ac = null, source = null;
+let started = false, fadeTimer = null;
 
-function initAudio(){
-  if(audioCtx) return;
-  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  analyser = audioCtx.createAnalyser();
-  analyser.fftSize = 2048;
-  analyser.smoothingTimeConstant = .90;
-  freqData = new Uint8Array(analyser.frequencyBinCount);
-  timeData = new Uint8Array(analyser.fftSize);
-  const src = audioCtx.createMediaElementSource(audio);
-  src.connect(analyser);
-  analyser.connect(audioCtx.destination);
+for (const name of tracks) {
+  const o = document.createElement('option');
+  o.value = name;
+  o.textContent = name;
+  $('#tracks').append(o);
 }
+$('#tracks').value = selected;
 
-function buildSelector(){
-  selector.innerHTML = "";
-  tracks.forEach((t,i)=>{
-    const btn = document.createElement("button");
-    btn.textContent = t.label;
-    btn.onclick = async e=>{
-      e.stopPropagation();
-      initAudio();
-      if(audioCtx.state==="suspended") await audioCtx.resume();
-      await loadTrack(i,true);
-    };
-    selector.appendChild(btn);
-  });
-}
-
-function updateButtons(){
-  [...selector.querySelectorAll("button")]
-    .forEach((b,i)=>b.classList.toggle("active",i===trackIndex));
-}
-
-async function loadTrack(i,autoplay=true){
-  trackIndex = ((i%tracks.length)+tracks.length)%tracks.length;
-  const t = tracks[trackIndex];
-  mode = t.mode;
-  titleEl.textContent = t.title;
-  audio.src = t.file;
+function load(name) {
+  audio.pause();
+  audio.src = name;
   audio.load();
-  updateButtons();
-  await loadVTT(t.vtt);
-  if(autoplay){ try{ await audio.play(); }catch(e){} }
-}
-
-audio.addEventListener("ended",()=>loadTrack(trackIndex+1,true));
-
-document.body.onclick = async ()=>{
-  initAudio();
-  if(audioCtx.state==="suspended") await audioCtx.resume();
-  if(audio.paused) await audio.play();
-  else audio.pause();
-};
-
-/* subtitles */
-
-let cues = [];
-
-async function loadVTT(url){
   cues = [];
-  subs.textContent = "";
-  try{
-    const res = await fetch(url);
-    if(!res.ok){ console.warn("Missing VTT:",url); return; }
-    cues = parseVTT(await res.text());
-  }catch(e){ console.warn("VTT:",e); }
+  caption.textContent = '';
+  title.classList.remove('hide');
+  started = false;
+  triedBlob = false;
+  clearTimeout(fadeTimer);
+  status.textContent = 'READY';
+
+  fetch(name.replace(/\.mp3$/i, '.vtt'))
+    .then(r => {
+      if (!r.ok) throw Error('Missing VTT');
+      return r.text();
+    })
+    .then(t => {
+      if ($('#tracks').value === name) {
+        cues = parseVtt(t);
+        status.textContent = 'CAPTIONS LOADED';
+      }
+    })
+    .catch(() => {
+      if ($('#tracks').value === name)
+        status.textContent = 'VTT NOT FOUND';
+    });
 }
 
-function parseVTT(text){
-  const out = [];
-  for(const block of text.replace(/\r/g,"").split(/\n{2,}/)){
-    const lines = block.trim().split("\n");
-    const ts = lines.find(l=>l.includes("-->"));
-    if(!ts) continue;
-    const ti = lines.indexOf(ts);
-    const [s,e] = ts.split("-->").map(x=>x.trim());
-    out.push({start:parseTime(s),end:parseTime(e),text:lines.slice(ti+1).join(" ")});
+function seconds(s) {
+  const a = s.replace(',', '.').split(':').map(Number);
+  return a.length === 3
+    ? a[0] * 3600 + a[1] * 60 + a[2]
+    : a[0] * 60 + a[1];
+}
+
+function parseVtt(s) {
+  return s.replace(/\r/g, '').split(/\n\s*\n/).flatMap(b => {
+    const lines = b.trim().split('\n');
+    const i = lines.findIndex(x => x.includes('-->'));
+    if (i < 0) return [];
+
+    const m = lines[i].match(
+      /(\d{2}:)?\d{2}:\d{2}[.,]\d{3}\s+-->\s+(\d{2}:)?\d{2}:\d{2}[.,]\d{3}/
+    );
+    if (!m) return [];
+
+    const [a, z] = m[0].split(/\s+-->\s+/);
+    return [{
+      start: seconds(a),
+      end: seconds(z),
+      text: lines.slice(i + 1).join(' ')
+        .replace(/<[^>]*>/g, '').trim()
+    }];
+  });
+}
+
+function fmt(t) {
+  if (!Number.isFinite(t)) return '00:00';
+  const n = Math.floor(t);
+  return String(Math.floor(n / 60)).padStart(2, '0')
+    + ':' + String(n % 60).padStart(2, '0');
+}
+
+function ensureAudio() {
+  try {
+    if (!ac) {
+      ac = new (window.AudioContext ||
+                window.webkitAudioContext)();
+      source = ac.createMediaElementSource(audio);
+      analyser = ac.createAnalyser();
+      analyser.fftSize = 2048;
+      analyser.smoothingTimeConstant = .72;
+      wave = new Uint8Array(analyser.fftSize);
+      source.connect(analyser);
+      analyser.connect(ac.destination);
+    }
+    ac.resume();
+  } catch (e) {
+    status.textContent = 'AUDIO VISUALIZATION UNAVAILABLE';
   }
-  return out;
 }
 
-function parseTime(t){
-  t = t.split(" ")[0].replace(",",".");
-  const p = t.split(":");
-  if(p.length===3) return (+p[0])*3600+(+p[1])*60+parseFloat(p[2]);
-  return (+p[0])*60+parseFloat(p[1]);
-}
-
-audio.ontimeupdate = ()=>{
-  const t = audio.currentTime;
-  const c = cues.find(c=>t>=c.start&&t<c.end+.2);
-  subs.textContent = c ? c.text : "";
+$('#play').onclick = () => {
+  if (audio.paused) {
+    ensureAudio();
+    audio.play().catch(() =>
+      status.textContent = 'AUDIO FILE NOT FOUND'
+    );
+  } else audio.pause();
 };
 
-/* canvas */
+audio.addEventListener('play', () => {
+  play.textContent = 'Ⅱ';
+  play.setAttribute('aria-label', 'Pause');
+  status.textContent = 'PLAYING';
 
-const canvas = document.getElementById("viz");
-const ctx    = canvas.getContext("2d");
-const W=480, H=480, cx=W/2, cy=H/2, R=W*.39;
-canvas.width=W; canvas.height=H;
-
-let frame=0, bass=0, mid=0, high=0;
-
-function updateEnergy(){
-  if(!analyser) return;
-  analyser.getByteFrequencyData(freqData);
-  let b=0,m=0,h=0;
-  for(let i=0;i<40;i++) b+=freqData[i];
-  for(let i=40;i<180;i++) m+=freqData[i];
-  for(let i=180;i<freqData.length;i++) h+=freqData[i];
-  bass+=(b/(40*255)-bass)*.07;
-  mid +=(m/(140*255)-mid )*.05;
-  high+=(h/((freqData.length-180)*255)-high)*.04;
-}
-
-function clearPortal(){
-  ctx.fillStyle="rgba(0,3,1,.11)";
-  ctx.fillRect(0,0,W,H);
-
-  ctx.save();
-  ctx.beginPath();
-  ctx.arc(cx,cy,R,0,Math.PI*2);
-  ctx.clip();
-
-  const g=ctx.createRadialGradient(cx,cy,0,cx,cy,R);
-  g.addColorStop(0,"rgba(0,18,8,.32)");
-  g.addColorStop(.65,"rgba(0,6,2,.52)");
-  g.addColorStop(1,"rgba(0,0,0,.98)");
-  ctx.fillStyle=g;
-  ctx.fillRect(0,0,W,H);
-  ctx.restore();
-
-  ctx.beginPath();
-  ctx.arc(cx,cy,R,0,Math.PI*2);
-  ctx.strokeStyle="rgba(80,200,120,.18)";
-  ctx.lineWidth=1.5;
-  ctx.shadowBlur=8;
-  ctx.shadowColor="#004422";
-  ctx.stroke();
-  ctx.shadowBlur=0;
-}
-
-/* ── shared substrate: drifting latent cloud ── */
-
-function drawLatentCloud(alpha=.08){
-  ctx.save();
-  ctx.beginPath();
-  ctx.arc(cx,cy,R,0,Math.PI*2);
-  ctx.clip();
-
-  for(let i=0;i<140;i++){
-    const a = frame*.002 + i*.17;
-    const r = R*.15 + (i%20)*R*.025;
-    const x = cx + Math.sin(a+i)*r*.6;
-    const y = cy + Math.cos(a*.8+i)*r*.5;
-    ctx.beginPath();
-    ctx.arc(x,y,2,0,Math.PI*2);
-    ctx.fillStyle=`rgba(124,255,196,${alpha})`;
-    ctx.fill();
-  }
-
-  ctx.restore();
-}
-
-/* ── mode 1: Accessible Futures — reachability cone ── */
-
-function drawFutures(){
-  drawLatentCloud(.06);
-
-  ctx.save();
-  ctx.beginPath();
-  ctx.arc(cx,cy,R,0,Math.PI*2);
-  ctx.clip();
-
-  // accessibility cone: branches that open outward from the present
-  const branches = 52;
-  for(let i=0;i<branches;i++){
-    const a      = i/branches*Math.PI*2;
-    // each branch reaches as far as its accessibility allows
-    const reach  = Math.max(0, Math.sin(frame*.007 + i*.41)) ;
-    const length = R*.18 + reach*R*.60;
-
-    // slight curve — futures don't travel straight
-    const bend   = Math.sin(frame*.005 + i*.7) * R*.12;
-
-    ctx.beginPath();
-    ctx.moveTo(cx, cy);
-    ctx.quadraticCurveTo(
-      cx + Math.cos(a + .35)*length*.55 + bend,
-      cy + Math.sin(a - .25)*length*.55 - bend*.4,
-      cx + Math.cos(a)*length,
-      cy + Math.sin(a)*length
+  if (!started) {
+    started = true;
+    fadeTimer = setTimeout(
+      () => title.classList.add('hide'), 150
     );
-    ctx.strokeStyle=`rgba(124,255,196,${.05 + reach*.12 + mid*.06})`;
-    ctx.lineWidth = 3;
-    ctx.lineCap  = "round";
-    ctx.stroke();
   }
-
-  // present moment — origin of all futures
-  ctx.beginPath();
-  ctx.arc(cx, cy, 10 + bass*8, 0, Math.PI*2);
-  const pg = ctx.createRadialGradient(cx,cy,0,cx,cy,14);
-  pg.addColorStop(0,"rgba(255,255,230,.95)");
-  pg.addColorStop(1,"rgba(200,255,210,.10)");
-  ctx.fillStyle = pg;
-  ctx.shadowBlur = 16;
-  ctx.shadowColor = "#ffffaa";
-  ctx.fill();
-  ctx.shadowBlur = 0;
-
-  // reachability horizon ring — what is accessible from here
-  ctx.beginPath();
-  ctx.arc(cx, cy, R*(.52 + bass*.06 + Math.sin(frame*.008)*.04), 0, Math.PI*2);
-  ctx.strokeStyle = "rgba(180,255,200,.12)";
-  ctx.lineWidth = 1;
-  ctx.stroke();
-
-  ctx.restore();
-  drawWaveTrace(.12);
-}
-
-/* ── mode 2: Death of the Uniform Object — dissolution ── */
-
-// stable seed positions for the object nodes
-const OBJ_SEEDS = Array.from({length:14},(_, i)=>{
-  const a = i/14*Math.PI*2;
-  return { bx: Math.cos(a)*R*.32, by: Math.sin(a)*R*.32 };
 });
 
-function drawObject(){
-  drawLatentCloud(.07);
-
-  ctx.save();
-  ctx.beginPath();
-  ctx.arc(cx,cy,R,0,Math.PI*2);
-  ctx.clip();
-
-  // dissolution cycle: 0 = fully formed object, 1 = fully dissolved
-  const cycle   = (Math.sin(frame*.008) + 1) * .5;   // 0..1
-  const scatter = cycle * R * .38;
-  const opacity = 1 - cycle * .75;
-
-  OBJ_SEEDS.forEach((s, i)=>{
-    // each node drifts outward as the object dissolves
-    const drift_a = i / OBJ_SEEDS.length * Math.PI*2 + frame*.003;
-    const x = cx + s.bx + Math.cos(drift_a)*scatter;
-    const y = cy + s.by + Math.sin(drift_a)*scatter;
-
-    // outer process halo — grows as object dissolves
-    ctx.beginPath();
-    ctx.arc(x, y, 20 + cycle*18, 0, Math.PI*2);
-    ctx.strokeStyle=`rgba(124,255,196,${(.04 + cycle*.08)*opacity*1.6})`;
-    ctx.lineWidth=1;
-    ctx.stroke();
-
-    // the object node itself — shrinks as it dissolves
-    const nodeR = Math.max(1, (12 - cycle*10) + bass*3);
-    ctx.beginPath();
-    ctx.arc(x, y, nodeR, 0, Math.PI*2);
-    ctx.fillStyle=`rgba(220,255,220,${opacity*.8})`;
-    ctx.shadowBlur = (1-cycle)*8;
-    ctx.shadowColor="#00cc66";
-    ctx.fill();
-    ctx.shadowBlur=0;
-  });
-
-  // object boundary — dissolves along with nodes
-  ctx.beginPath();
-  ctx.arc(cx, cy, R*(.34 + cycle*.08), 0, Math.PI*2);
-  ctx.strokeStyle=`rgba(180,255,200,${(.22 - cycle*.18)})`;
-  ctx.lineWidth=1.5;
-  ctx.stroke();
-
-  ctx.restore();
-  drawWaveTrace(.16);
-}
-
-/* ── mode 3: Reconstructing Reality — latent assembly ── */
-
-// fixed latent coordinates — the hidden structure
-const LATENT_PTS = Array.from({length:24},(_, i)=>{
-  const a = i/24*Math.PI*2 + i*.11;
-  const r = R*(.20 + (i%5)*.07);
-  return { lx: Math.cos(a)*r, ly: Math.sin(a)*r };
+audio.addEventListener('pause', () => {
+  play.textContent = '▶';
+  play.setAttribute('aria-label', 'Play');
+  if (!audio.ended) status.textContent = 'PAUSED';
 });
 
-function drawLatent(){
-  // sparse cloud is the raw noise
-  drawLatentCloud(.05);
+audio.addEventListener('ended', () => {
+  status.textContent = 'FINISHED';
+});
 
-  ctx.save();
-  ctx.beginPath();
-  ctx.arc(cx,cy,R,0,Math.PI*2);
-  ctx.clip();
+audio.addEventListener('error', () => {
+  status.textContent = 'AUDIO FILE NOT FOUND';
+});
 
-  // reconstruction wave: sweeps across frame, assembling structure
-  // points "emerge" as the wave passes over them
-  const wavePhase = (frame*.009) % (Math.PI*2);
+let seeking = false, blobUrl = null, triedBlob = false;
 
-  LATENT_PTS.forEach((p, i)=>{
-    const angle = Math.atan2(p.ly, p.lx);
-    // normalise to 0..2π
-    const norm  = (angle + Math.PI*2) % (Math.PI*2);
-    // distance behind the wave front
-    const dist  = (wavePhase - norm + Math.PI*2) % (Math.PI*2);
-    // 0 = just assembled, fades back toward noise over ~2π
-    const assembled = Math.max(0, 1 - dist/(Math.PI*1.4));
+function updateTime() {
+  const duration = audio.duration;
+  time.textContent = fmt(audio.currentTime) + " / " + fmt(duration);
+  if (!seeking && Number.isFinite(duration) && duration > 0) {
+    seek.value = Math.round(audio.currentTime / duration * 1000);
+  }
+  const c = cues.find(c =>
+    c.start <= audio.currentTime && audio.currentTime < c.end
+  );
+  caption.textContent = captions ? (c?.text || "") : "";
+}
 
-    const x = cx + p.lx;
-    const y = cy + p.ly;
+audio.addEventListener("timeupdate", updateTime);
+audio.addEventListener("seeked", updateTime);
 
-    if(assembled > .02){
-      // connection lines to nearby assembled points
-      LATENT_PTS.forEach((q, j)=>{
-        if(j<=i) return;
-        const dx = p.lx-q.lx, dy = p.ly-q.ly;
-        if(dx*dx+dy*dy > R*R*.18) return;
-        const qAngle = (Math.atan2(q.ly,q.lx)+Math.PI*2)%(Math.PI*2);
-        const qDist  = (wavePhase-qAngle+Math.PI*2)%(Math.PI*2);
-        const qAssembled = Math.max(0,1-qDist/(Math.PI*1.4));
-        const edgeA = assembled*qAssembled;
-        if(edgeA < .02) return;
-        ctx.beginPath();
-        ctx.moveTo(x,y);
-        ctx.lineTo(cx+q.lx,cy+q.ly);
-        ctx.strokeStyle=`rgba(124,255,196,${edgeA*.18})`;
-        ctx.lineWidth=1.5;
-        ctx.stroke();
-      });
 
-      // node — brightness reflects how assembled it is
-      ctx.beginPath();
-      ctx.arc(x, y, 3 + assembled*5 + bass*2, 0, Math.PI*2);
-      ctx.fillStyle=`rgba(200,255,220,${assembled*.85})`;
-      ctx.shadowBlur = assembled*10;
-      ctx.shadowColor="#00ff88";
-      ctx.fill();
-      ctx.shadowBlur=0;
-    } else {
-      // not yet assembled — just a dim latent point
-      ctx.beginPath();
-      ctx.arc(x, y, 1.5, 0, Math.PI*2);
-      ctx.fillStyle="rgba(80,160,100,.12)";
-      ctx.fill();
+function seekTarget() {
+  const d = audio.duration;
+  return Number.isFinite(d) && d > 0
+    ? Number(seek.value) / 1000 * d : null;
+}
+
+// Some static servers ignore HTTP Range requests, which makes the
+// browser treat the file as unseekable and jump back to 0:00.
+// If a jump lands at the start, reload the track as a blob, which
+// is always seekable, and resume at the requested time.
+function loadAsBlob(t, resume) {
+  triedBlob = true;
+  status.textContent = 'BUFFERING FOR SEEK';
+  fetch(audio.currentSrc || audio.src)
+    .then(r => r.blob())
+    .then(b => {
+      if (blobUrl) URL.revokeObjectURL(blobUrl);
+      blobUrl = URL.createObjectURL(b);
+      audio.addEventListener('loadedmetadata', () => {
+        audio.currentTime = t;
+        if (resume) audio.play().catch(() => {});
+        status.textContent = resume ? 'PLAYING' : 'PAUSED';
+      }, { once: true });
+      audio.src = blobUrl;
+      audio.load();
+    })
+    .catch(() => status.textContent = 'SEEK UNAVAILABLE');
+}
+
+function jumpTo(t) {
+  const resume = !audio.paused;
+  audio.currentTime = t;
+  audio.addEventListener('seeked', () => {
+    if (!triedBlob && t > 2 && audio.currentTime < 1)
+      loadAsBlob(t, resume);
+  }, { once: true });
+}
+
+seek.addEventListener('input', () => {
+  seeking = true;
+  const t = seekTarget();
+  if (t !== null)
+    time.textContent = fmt(t) + " / " + fmt(audio.duration);
+});
+
+seek.addEventListener('change', () => {
+  const t = seekTarget();
+  if (t !== null) jumpTo(t);
+  seeking = false;
+});
+
+$('#volume').oninput = e =>
+  audio.volume = Number(e.target.value);
+
+$('#cc').onclick = () => {
+  captions = !captions;
+  $('#cc').textContent =
+    'CAPTIONS ' + (captions ? 'ON' : 'OFF');
+  if (!captions) caption.textContent = '';
+};
+
+$('#copy').onclick = async () => {
+  try {
+    await navigator.clipboard.writeText(location.href);
+    $('#copy').textContent = 'COPIED';
+    setTimeout(() =>
+      $('#copy').textContent = 'COPY LINK', 1500
+    );
+  } catch {
+    $('#copy').textContent = 'COPY UNAVAILABLE';
+  }
+};
+
+$('#tracks').onchange = e => {
+  const u = new URL(location.href);
+  u.searchParams.set('track', e.target.value);
+  history.replaceState(null, '', u);
+  load(e.target.value);
+};
+
+let W = 0, H = 0, dpr = 1;
+
+function resize() {
+  dpr = Math.min(devicePixelRatio || 1, 2);
+  W = innerWidth;
+  H = innerHeight;
+  canvas.width = Math.round(W * dpr);
+  canvas.height = Math.round(H * dpr);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+addEventListener('resize', resize);
+resize();
+
+let phase = 0;
+let last = performance.now();
+let energy = 0;
+
+function frame(now) {
+  const dt = Math.min((now - last) / 1000, .06);
+  last = now;
+  const active = !audio.paused && !audio.ended;
+  let target = 0;
+
+  if (analyser && active) {
+    analyser.getByteTimeDomainData(wave);
+    let sum = 0;
+    for (let i = 0; i < wave.length; i += 4) {
+      const x = (wave[i] - 128) / 128;
+      sum += x * x;
     }
-  });
+    target = Math.min(
+      1, Math.sqrt(sum / (wave.length / 4)) * 3.8
+    );
+  }
 
-  // the reconstruction wavefront itself — a sweeping arc
+  energy += (target - energy) * Math.min(1, dt * 5);
+  phase += dt * (active ? .10 + energy * .08 : .018);
+
+  ctx.fillStyle = '#020605';
+  ctx.fillRect(0, 0, W, H);
+
+  const cx = W / 2;
+  const cy = H * .47;
+  const R = Math.min(W * .39, H * .39, 430);
+  ctx.save();
+  ctx.translate(cx, cy);
+
+  // Faint instrument reticle
+  ctx.strokeStyle = 'rgba(95,185,137,.095)';
+  ctx.lineWidth = .7;
   ctx.beginPath();
-  ctx.arc(cx, cy, R*.78, wavePhase - .18, wavePhase + .18);
-  ctx.strokeStyle=`rgba(180,255,210,${.18 + mid*.14})`;
-  ctx.lineWidth=2;
-  ctx.shadowBlur=12;
-  ctx.shadowColor="#00ff88";
+  ctx.moveTo(-R * 1.15, 0);
+  ctx.lineTo(R * 1.15, 0);
+  ctx.moveTo(0, -R * 1.15);
+  ctx.lineTo(0, R * 1.15);
   ctx.stroke();
-  ctx.shadowBlur=0;
+
+  for (let r = .25; r <= 1; r += .25) {
+    ctx.beginPath();
+    ctx.arc(0, 0, R * r, 0, Math.PI * 2);
+    ctx.stroke();
+  }
+
+  // XY scope: phase-coupled oscillators
+  // with live audio perturbations
+  const n = 1100;
+  const a = 3, b = 2;
+  const shift = phase * .68;
+  const drift = phase * .14;
+  const amp = 1 + energy * .11;
+
+  ctx.lineCap = 'round';
+
+  for (let pass = 0; pass < 2; pass++) {
+    ctx.beginPath();
+
+    for (let i = 0; i <= n; i++) {
+      const t = i / n * Math.PI * 2;
+      const sample = wave && active
+        ? (wave[Math.floor(i / n *
+            (wave.length - 1))] - 128) / 128
+        : 0;
+      const perturb = sample * energy * .13;
+      const x = Math.sin(a * t + shift + perturb)
+        * R * .91 * amp;
+      const y = Math.sin(
+        b * t + drift + Math.PI / 2 + perturb * .7
+      ) * R * .82 * amp;
+
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+
+    ctx.strokeStyle = pass === 0
+      ? 'rgba(58,255,158,.12)'
+      : `rgba(146,255,204,${.64 + energy * .3})`;
+    ctx.lineWidth = pass === 0 ? 8 : 1.45;
+    ctx.shadowBlur = pass === 0 ? 23 : 8;
+    ctx.shadowColor = '#55ffad';
+    ctx.stroke();
+  }
 
   ctx.restore();
-  drawWaveTrace(.14);
+  requestAnimationFrame(frame);
 }
 
-/* ── lissajous wave trace ── */
-
-function drawWaveTrace(lagBase){
-  if(!analyser) return;
-  analyser.getByteTimeDomainData(timeData);
-  const lag = Math.floor(timeData.length*(lagBase+mid*.06));
-
-  ctx.beginPath();
-  for(let i=0;i<timeData.length;i+=3){
-    const a = (timeData[i]-128)/128;
-    const b = (timeData[(i+lag)%timeData.length]-128)/128;
-    const x = cx + a*R*.50 + Math.sin(frame*.007)*8;
-    const y = cy + b*R*.42 + Math.cos(frame*.005)*6;
-    if(i===0) ctx.moveTo(x,y);
-    else ctx.lineTo(x,y);
-  }
-  ctx.strokeStyle="rgba(100,220,160,.48)";
-  ctx.lineWidth=3;
-  ctx.lineCap="round";
-  ctx.shadowBlur=8;
-  ctx.shadowColor="#00aa55";
-  ctx.stroke();
-  ctx.shadowBlur=0;
-}
-
-/* ── main loop ── */
-
-function draw(){
-  frame++;
-  updateEnergy();
-  clearPortal();
-
-  if(mode==="futures") drawFutures();
-  if(mode==="object")  drawObject();
-  if(mode==="latent")  drawLatent();
-
-  requestAnimationFrame(draw);
-}
-
-buildSelector();
-loadTrack(0,false);
-draw();
+requestAnimationFrame(frame);
+load(selected);
 </script>
-
 </body>
 </html>

@@ -1,0 +1,395 @@
+Prophecy transcript corrections: 20261106-155152-343545
+Only spelling/terminology corrected; factual/editorial claims unchanged.
+
+A_Self-Refuting_Prophecy.txt: 22 replacement(s)
+  'reality behind the blaster' -> 'reality behind the plaster': 1
+  '\\bEke(?=\\s+(?:Flyxion|Homo)\\b)' -> 'Ecce': 4
+  '\\b(?:myriology|mariology)\\b' -> 'mereology': 2
+  'parts and the holes they form' -> 'parts and the wholes they form': 1
+  '\\bGeorge Spencer Brown\\b' -> 'George Spencer-Brown': 1
+  '\\bFlexium\\b' -> 'Flyxion': 2
+  'And, flags and argues' -> 'And Flyxion argues': 1
+  '\\ba fantasia\\b' -> 'aphantasia': 1
+  '\\ban endophagia\\b' -> 'anendophasia': 1
+  '\\b(?:Fleishy|Philaxian)\\b' -> 'Flyxion': 3
+  'something every day\\.' -> 'something everyday.': 1
+  'digital letter experiment' -> 'digital ledger experiment': 1
+  '\\bthe formalists steps in\\b' -> 'the formalist steps in': 1
+  'I sifted the flower' -> 'I sifted the flour': 1
+  '\\bpet computer\\b' -> 'PET computer': 1
+--- A_Self-Refuting_Prophecy.txt
++++ A_Self-Refuting_Prophecy.txt (corrected)
+@@ -15,7 +15,7 @@
+ The classic homeowner nightmare.
+ Yeah. So you take a sledgehammer, you open up the drywall to fix what you assume is a really simple leak,
+ and you are immediately confronted by absolute chaos.
+-The reality behind the blaster.
++The reality behind the plaster.
+ Pure, unadulterated reality.
+ I mean, the beautiful blueprint you were holding, total fiction.
+ Right.
+@@ -38,7 +38,7 @@
+ Written by an independent researcher named Flyxion.
+ Yeah.
+ And the title alone is just a gauntlet thrown on the ground.
+-It's called, uh, Eke Flyxion, How One Becomes What One Has Already Formally Specified.
++It's called, uh, Ecce Flyxion, How One Becomes What One Has Already Formally Specified.
+ Quite a mouthful.
+ It is.
+ But our mission today is to navigate this document, because it's attempting something almost contradictory.
+@@ -47,9 +47,9 @@
+ how we know things, and how we record our lives.
+ But simultaneously, it actively designs mechanisms to tear its own arguments down.
+ The structure is undeniably provocative.
+-I mean, the title, Eke Flyxion, is a blatant hijacking of Friedrich Nietzsche's 1888 autobiography, Eke Homo.
+-Right.
+-And for context for you listening, Nietzsche wrote Eke Homo right before his final mental collapse.
++I mean, the title, Ecce Flyxion, is a blatant hijacking of Friedrich Nietzsche's 1888 autobiography, Ecce Homo.
++Right.
++And for context for you listening, Nietzsche wrote Ecce Homo right before his final mental collapse.
+ Yeah, it's famous for its aggressively grandiose chapter titles.
+ Like, incredibly arrogant.
+ Very.
+@@ -144,9 +144,9 @@
+ But you wouldn't have the steam without the kettle.
+ So as soon as you start breaking the physical world down, you just end up needing an infinite supply of new nouns.
+ And the boundaries between them start to blur.
+-This is a grounding in what philosophers call myriology.
+-Right.
+-It's the formal study of parts and the holes they form.
++This is a grounding in what philosophers call mereology.
++Right.
++It's the formal study of parts and the wholes they form.
+ It's a very ancient problem.
+ Like, how many grains of sand do you have to remove before a heap of sand is no longer a heap?
+ Oh, the Sorites paradox.
+@@ -157,19 +157,19 @@
+ English, please.
+ In plainer terms, things exist because our logical and scientific frameworks require them to exist to make the math work.
+ Oh, okay.
+-And another thinker, George Spencer Brown, in his book Laws of Form, argued that the most fundamental act of consciousness, even before math or logic, is the act of drawing a distinction.
++And another thinker, George Spencer-Brown, in his book Laws of Form, argued that the most fundamental act of consciousness, even before math or logic, is the act of drawing a distinction.
+ Drawing a line in the sand.
+ Exactly.
+ Exactly.
+ Saying, this side is different from that side.
+-Now, Flexium builds on this, but the prophet takes it to a radical extreme.
++Now, Flyxion builds on this, but the prophet takes it to a radical extreme.
+ He usually does.
+ He argues that most of Western philosophy has fundamentally failed because it mistook a grammatical convenience, which is the noun, for an actual physical discovery about the universe.
+ So, wait, I want to make sure I'm fully grasping this. Is he saying that when I hold a coffee mug, the universe doesn't know what a mug is?
+ Pretty much.
+ That the boundary between the ceramic and the air around it isn't an inherent truth of reality, but just a shortcut my brain is using?
+ That is exactly what he is saying.
+-Flexium argues that objects do not exist independently in the wild, just waiting to be named by us.
++Flyxion argues that objects do not exist independently in the wild, just waiting to be named by us.
+ They are the result of what he calls boundary-drawing operations.
+ A distinction is not a physical thing, it's a relationship.
+ A relationship between a defined region and its surroundings?
+@@ -188,7 +188,7 @@
+ That line on the map only exists because of passports, border guards, treaties, and continuous political effort.
+ Stop the effort, and the border disappears.
+ Exactly.
+-And, flags and argues that all objects are like this, even your coffee mug.
++And Flyxion argues that all objects are like this, even your coffee mug.
+ Its boundary was drawn by a manufacturing process.
+ Kilns, mold, human labor.
+ Right.
+@@ -227,11 +227,11 @@
+ He reveals his cognitive profile.
+ Yeah.
+ And it is completely alien to how I experience the world.
+-He has a fantasia, which means he possesses zero mental imagery.
++He has aphantasia, which means he possesses zero mental imagery.
+ None at all.
+ He has no mind's eye.
+ If you tell him to picture a beach, it's just dark in his head.
+-And he also has an endophagia.
++And he also has anendophasia.
+ Right.
+ Which means he has no inner monologue.
+ No voice talking to him in his head.
+@@ -292,7 +292,7 @@
+ Transcription meaning, like, I have a perfect image in my head and my only job is to faithfully copy it down onto the paper.
+ The myth of the visionary artist.
+ Right.
+-Fleishy rejects this completely.
++Flyxion rejects this completely.
+ He shares an anecdote about his time painting at a folk festival.
+ He used to set up these massive canvases and paint for hours in front of a crowd.
+ Wow.
+@@ -432,7 +432,7 @@
+ So if the history of that $1,000 bank account is deleted or falsified, you are quite literally dealing with a different object, even if the balance on the screen looks the same.
+ Yes.
+ Okay.
+-I want to try and ground this in something every day.
++I want to try and ground this in something everyday.
+ Let's talk about baking.
+ Baking.
+ Okay.
+@@ -475,7 +475,7 @@
+ Yeah. How?
+ Flyxion's answer is cryptography.
+ In Appendix C of the book, he doesn't just theorize.
+-He provides actual Python code for a digital letter experiment.
++He provides actual Python code for a digital ledger experiment.
+ He builds a system utilizing a cryptographic hash chain.
+ I want to spend some time on this because cryptography can feel like dark magic to people who don't code.
+ How does a hash chain actually work, and why does it solve his problem of proving the timeline?
+@@ -523,7 +523,7 @@
+ The hash chain literally weaponizes math to force the history to be visible.
+ It makes the recipe unfakeable.
+ Well, I would caution you there.
+-Because the formalists steps in with a vital distinction that Flyxion himself has to concede.
++Because the formalist steps in with a vital distinction that Flyxion himself has to concede.
+ Uh-oh, what is it?
+ The hash chain proves integrity.
+ It proves mathematically that the ledger has not been retroactively altered or tampered with since the moment the envelopes were sealed.
+@@ -533,7 +533,7 @@
+ It proves nobody broke into the envelope, but it doesn't prove that the person writing the note inside the envelope wasn't lying through their teeth to begin with.
+ Correct.
+ The ledger will faithfully record a lie.
+-If you write down, I sifted the flower, when you actually didn't, the hash chain will mathematically lock that lie into history forever.
++If you write down, I sifted the flour, when you actually didn't, the hash chain will mathematically lock that lie into history forever.
+ Forever.
+ Furthermore, it doesn't solve completeness.
+ It won't record the fact that you dropped the cake on the floor if you simply choose not to enter that event into the ledger.
+@@ -648,7 +648,7 @@
+ Mathematically, they are highly correlated variables.
+ They are essentially one single judgment sampled a thousand times.
+ That makes so much sense.
+-If the underlying training data of the model has a bias regarding, say, mariology, then spawning a million instances of that model won't correct the bias.
++If the underlying training data of the model has a bias regarding, say, mereology, then spawning a million instances of that model won't correct the bias.
+ They will all just aggressively agree on the same blind spot.
+ The ordinary person illustrates this with a devastatingly simple parable.
+ Imagine a carpenter who wants to ensure a piece of wood is cut exactly to length.
+@@ -762,7 +762,7 @@
+ He points out all the unspecified accidents that actually defined who he is.
+ The random chance events.
+ He talks about walking down a road when he was 12 years old and finding a discarded Commodore
+-pet computer sitting in the trash.
++PET computer sitting in the trash.
+ That random piece of roadside garbage led him to learn programming in an unsupervised room,
+ which shaped his entire analytical mindset.
+ He brings up his natural aphantasia again, too.
+@@ -856,12 +856,12 @@
+ The ultimate takeaway is having the courage to keep the ledger of your own mistakes public,
+ at least to yourself.
+ To not mistake the cutting of the canvas for the creation of art.
+-But spending all this time with Philaxian's theories leaves me with a final, honestly somewhat
++But spending all this time with Flyxion's theories leaves me with a final, honestly somewhat
+ terrifying thought.
+ But we talked at the beginning about blueprints versus the messy, patched-up house we actually
+ live in.
+ Right.
+-And we explored how Philaxian wants perfect digital ledgers, cryptographic hash chains,
++And we explored how Flyxion wants perfect digital ledgers, cryptographic hash chains,
+ to record every operation so history can never be faked or forgotten.
+ Yes.
+ But if our identity is truly defined by our raw, uncompacted history, every mistake we've
+
+
+A_Self-Refuting_Prophecy.vtt: 22 replacement(s)
+  'reality behind the blaster' -> 'reality behind the plaster': 1
+  '\\bEke(?=\\s+(?:Flyxion|Homo)\\b)' -> 'Ecce': 4
+  '\\b(?:myriology|mariology)\\b' -> 'mereology': 2
+  'parts and the holes they form' -> 'parts and the wholes they form': 1
+  '\\bGeorge Spencer Brown\\b' -> 'George Spencer-Brown': 1
+  '\\bFlexium\\b' -> 'Flyxion': 2
+  'And, flags and argues' -> 'And Flyxion argues': 1
+  '\\ba fantasia\\b' -> 'aphantasia': 1
+  '\\ban endophagia\\b' -> 'anendophasia': 1
+  '\\b(?:Fleishy|Philaxian)\\b' -> 'Flyxion': 3
+  'something every day\\.' -> 'something everyday.': 1
+  'digital letter experiment' -> 'digital ledger experiment': 1
+  '\\bthe formalists steps in\\b' -> 'the formalist steps in': 1
+  'I sifted the flower' -> 'I sifted the flour': 1
+  '\\bpet computer\\b' -> 'PET computer': 1
+--- A_Self-Refuting_Prophecy.vtt
++++ A_Self-Refuting_Prophecy.vtt (corrected)
+@@ -52,7 +52,7 @@
+ and you are immediately confronted by absolute chaos.
+ 
+ 00:52.500 --> 00:53.780
+-The reality behind the blaster.
++The reality behind the plaster.
+ 
+ 00:53.780 --> 00:56.100
+ Pure, unadulterated reality.
+@@ -121,7 +121,7 @@
+ And the title alone is just a gauntlet thrown on the ground.
+ 
+ 02:06.040 --> 02:12.360
+-It's called, uh, Eke Flyxion, How One Becomes What One Has Already Formally Specified.
++It's called, uh, Ecce Flyxion, How One Becomes What One Has Already Formally Specified.
+ 
+ 02:12.600 --> 02:13.420
+ Quite a mouthful.
+@@ -148,13 +148,13 @@
+ The structure is undeniably provocative.
+ 
+ 02:37.840 --> 02:44.560
+-I mean, the title, Eke Flyxion, is a blatant hijacking of Friedrich Nietzsche's 1888 autobiography, Eke Homo.
++I mean, the title, Ecce Flyxion, is a blatant hijacking of Friedrich Nietzsche's 1888 autobiography, Ecce Homo.
+ 
+ 02:44.880 --> 02:45.200
+ Right.
+ 
+ 02:45.200 --> 02:51.020
+-And for context for you listening, Nietzsche wrote Eke Homo right before his final mental collapse.
++And for context for you listening, Nietzsche wrote Ecce Homo right before his final mental collapse.
+ 
+ 02:51.760 --> 02:55.060
+ Yeah, it's famous for its aggressively grandiose chapter titles.
+@@ -439,13 +439,13 @@
+ And the boundaries between them start to blur.
+ 
+ 07:46.760 --> 07:49.220
+-This is a grounding in what philosophers call myriology.
++This is a grounding in what philosophers call mereology.
+ 
+ 07:49.980 --> 07:50.200
+ Right.
+ 
+ 07:50.300 --> 07:53.120
+-It's the formal study of parts and the holes they form.
++It's the formal study of parts and the wholes they form.
+ 
+ 07:53.120 --> 07:54.760
+ It's a very ancient problem.
+@@ -478,7 +478,7 @@
+ Oh, okay.
+ 
+ 08:27.340 --> 08:38.800
+-And another thinker, George Spencer Brown, in his book Laws of Form, argued that the most fundamental act of consciousness, even before math or logic, is the act of drawing a distinction.
++And another thinker, George Spencer-Brown, in his book Laws of Form, argued that the most fundamental act of consciousness, even before math or logic, is the act of drawing a distinction.
+ 
+ 08:39.460 --> 08:40.580
+ Drawing a line in the sand.
+@@ -493,7 +493,7 @@
+ Saying, this side is different from that side.
+ 
+ 08:45.440 --> 08:49.100
+-Now, Flexium builds on this, but the prophet takes it to a radical extreme.
++Now, Flyxion builds on this, but the prophet takes it to a radical extreme.
+ 
+ 08:49.500 --> 08:50.580
+ He usually does.
+@@ -514,7 +514,7 @@
+ That is exactly what he is saying.
+ 
+ 09:22.700 --> 09:28.640
+-Flexium argues that objects do not exist independently in the wild, just waiting to be named by us.
++Flyxion argues that objects do not exist independently in the wild, just waiting to be named by us.
+ 
+ 09:29.460 --> 09:32.920
+ They are the result of what he calls boundary-drawing operations.
+@@ -571,7 +571,7 @@
+ Exactly.
+ 
+ 10:36.500 --> 10:40.660
+-And, flags and argues that all objects are like this, even your coffee mug.
++And Flyxion argues that all objects are like this, even your coffee mug.
+ 
+ 10:41.340 --> 10:44.500
+ Its boundary was drawn by a manufacturing process.
+@@ -688,7 +688,7 @@
+ And it is completely alien to how I experience the world.
+ 
+ 12:53.380 --> 12:58.340
+-He has a fantasia, which means he possesses zero mental imagery.
++He has aphantasia, which means he possesses zero mental imagery.
+ 
+ 12:58.720 --> 12:59.120
+ None at all.
+@@ -700,7 +700,7 @@
+ If you tell him to picture a beach, it's just dark in his head.
+ 
+ 13:03.880 --> 13:06.220
+-And he also has an endophagia.
++And he also has anendophasia.
+ 
+ 13:06.600 --> 13:06.880
+ Right.
+@@ -883,7 +883,7 @@
+ Right.
+ 
+ 16:37.960 --> 16:39.160
+-Fleishy rejects this completely.
++Flyxion rejects this completely.
+ 
+ 16:39.640 --> 16:42.860
+ He shares an anecdote about his time painting at a folk festival.
+@@ -1303,7 +1303,7 @@
+ Okay.
+ 
+ 25:06.280 --> 25:08.760
+-I want to try and ground this in something every day.
++I want to try and ground this in something everyday.
+ 
+ 25:08.760 --> 25:11.360
+ Let's talk about baking.
+@@ -1432,7 +1432,7 @@
+ In Appendix C of the book, he doesn't just theorize.
+ 
+ 27:28.120 --> 27:31.540
+-He provides actual Python code for a digital letter experiment.
++He provides actual Python code for a digital ledger experiment.
+ 
+ 27:32.200 --> 27:35.820
+ He builds a system utilizing a cryptographic hash chain.
+@@ -1576,7 +1576,7 @@
+ Well, I would caution you there.
+ 
+ 30:28.680 --> 30:33.760
+-Because the formalists steps in with a vital distinction that Flyxion himself has to concede.
++Because the formalist steps in with a vital distinction that Flyxion himself has to concede.
+ 
+ 30:34.280 --> 30:35.120
+ Uh-oh, what is it?
+@@ -1606,7 +1606,7 @@
+ The ledger will faithfully record a lie.
+ 
+ 31:04.380 --> 31:11.680
+-If you write down, I sifted the flower, when you actually didn't, the hash chain will mathematically lock that lie into history forever.
++If you write down, I sifted the flour, when you actually didn't, the hash chain will mathematically lock that lie into history forever.
+ 
+ 31:11.880 --> 31:12.220
+ Forever.
+@@ -1951,7 +1951,7 @@
+ That makes so much sense.
+ 
+ 38:59.840 --> 39:09.280
+-If the underlying training data of the model has a bias regarding, say, mariology, then spawning a million instances of that model won't correct the bias.
++If the underlying training data of the model has a bias regarding, say, mereology, then spawning a million instances of that model won't correct the bias.
+ 
+ 39:09.780 --> 39:12.820
+ They will all just aggressively agree on the same blind spot.
+@@ -2293,7 +2293,7 @@
+ He talks about walking down a road when he was 12 years old and finding a discarded Commodore
+ 
+ 45:51.840 --> 45:53.440
+-pet computer sitting in the trash.
++PET computer sitting in the trash.
+ 
+ 45:54.100 --> 45:58.640
+ That random piece of roadside garbage led him to learn programming in an unsupervised room,
+@@ -2575,7 +2575,7 @@
+ To not mistake the cutting of the canvas for the creation of art.
+ 
+ 51:17.480 --> 51:22.220
+-But spending all this time with Philaxian's theories leaves me with a final, honestly somewhat
++But spending all this time with Flyxion's theories leaves me with a final, honestly somewhat
+ 
+ 51:22.220 --> 51:23.160
+ terrifying thought.
+@@ -2590,7 +2590,7 @@
+ Right.
+ 
+ 51:29.180 --> 51:34.060
+-And we explored how Philaxian wants perfect digital ledgers, cryptographic hash chains,
++And we explored how Flyxion wants perfect digital ledgers, cryptographic hash chains,
+ 
+ 51:34.060 --> 51:37.620
+ to record every operation so history can never be faked or forgotten.
+

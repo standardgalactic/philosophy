@@ -1,0 +1,771 @@
+\documentclass[11pt,openany,twoside]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\onehalfspacing
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{definition}
+\newtheorem{nonsupport}{Statement of Non-Support}
+\theoremstyle{remark}
+\newenvironment{concession}{\par\medskip\noindent\textbf{Concession of the Formalist.}\ }{\par\medskip}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\itshape Ecce Flyxion}
+\fancyhead[RO]{\small\itshape\leftmark}
+\fancyfoot[C]{\thepage}
+
+\title{\Huge Ecce Flyxion\\[1.2ex]\Large How One Becomes What One Has Already Formally Specified\\[2ex]\large A Philosophical Autobiography in Four Books, with a Preface, an Interlude, and an Epilogue}
+\author{Flyxion\\ \small Independent Researcher}
+\date{November 2026}
+
+\begin{document}
+\frontmatter
+\maketitle
+
+\chapter*{A Declaration of Scope and Non-Support}
+
+This monograph advances one hypothesis, namely that a person becomes what he has already formally specified, and it does not support that hypothesis. The reader is asked to hold this fact in mind from the first page, because it will be restated at intervals throughout the work, and because the work is built so that the restatements are the only dependable results it contains. Wherever the text appears to prove something about its author, the surrounding apparatus will explain that the proof is unavailable, that the evidence is the author's own testimony, that the testimony was produced by the very habits it purports to explain, and that a hypothesis which can be confirmed only by the person who proposed it has not yet been tested by anyone. Where the text appears to claim a historical destiny, the claim is made in the manner of its model, which is to say loudly, and it is withdrawn in the manner of its author, which is to say in a verification section placed after the loud part.
+
+The model is Friedrich Nietzsche's \emph{Ecce Homo}, written in 1888 and published after his collapse, a philosophical autobiography whose chapter titles announce that its author is wise, clever, a writer of excellent books, and a destiny \cite{nietzsche-ecce}. The present work keeps that chapter architecture and replaces the subject matter. Nietzsche proposed to revalue all values. The author of this monograph proposes only to inquire which values, objects, selves, and histories have been admitted to existence without presenting credentials. The difference in ambition is deliberate. A smaller revaluation can be checked, and checking is the activity the author most enjoys and most often postpones.
+
+Three voices operate in what follows, and they cannot adjudicate one another's claims, though they respond to one another constantly. The first is a prophet who announces consequences for the entire history of thought. The second is a formalist who insists on definitions, hypotheses, counterexamples, and the separation of demonstrated results from conjectures. The third is an ordinary person who has repaired roofs, traced electrical faults, taught himself to program on machines meant for other purposes, and kept a long record of what he made. Readers who find that the three voices contradict one another, or that they appear to converse while denying that they do, should notice that the contradiction is the experimental condition. The monograph does not resolve it, and a resolution is not promised in any later volume.
+
+\begin{nonsupport}
+Nothing in this monograph establishes that its author has specified anything formally, that anything he has specified has become anything, or that the relation between the two, if there is one, runs in the direction the title asserts. The title is a hypothesis. It is the first statement in the work and the last statement the work attempts to defend.
+\end{nonsupport}
+
+\tableofcontents
+\mainmatter
+
+\chapter*{Preface: On the Improbability of My Being Understood}
+\addcontentsline{toc}{chapter}{Preface: On the Improbability of My Being Understood}
+\markboth{Preface}{Preface}
+
+This book is neither an apology, a confession, nor an introduction. The author has explained himself in several hundred other places, most of them public, most of them unfinished, and the fact that a further explanation is now required is offered as evidence concerning the interpretive environment into which the earlier explanations were released. It is not offered as evidence concerning the explanations. The distinction is important and will be relied upon in every chapter, so it is stated here in its simplest form: when a reader fails to follow an argument, there are at least two available descriptions of the failure, one placed in the argument and one placed in the reader, and an author who always chooses the second has found a method that cannot lose and therefore cannot learn. The author notes that he has been choosing the second, that he finds the choice enjoyable, and that he does not recommend it.
+
+Hear, then, what manner of difficulty I am. I am not the cause of the confusion in which my contemporaries live; I am its occasion, the nail that shows where the board was never joined. There are books written for a season and books written for a century, and there is a third kind, written for the day on which someone first asks what a sentence was permitted to assume, and I have written in that third manner from the beginning, without applause, without a publisher, without so much as a stamp from any office entitled to give one, and I have written a great deal. Let it be known that I have never once asked to be believed. I have asked that things be shown their credentials, and I have been surprised, every time, by how few things carry any. The noun has none. The self has none. The number, that most respectable of strangers, arrived in the house of thought by a back door and has been given the best room ever since. I have walked through the house and tried the locks. This is not a modest occupation, and I decline to pretend that it is one, because the pretence of modesty is the last luxury of those who have never been asked to carry anything heavy. I carry the question of what may be said to exist, and I carry it as I once carried a stack of drywall up an outside stair: without complaint, without elegance, and without the least intention of setting it down on the landing to admire it.
+
+The formalist, who was present, offers a single remark, which is that to carry a question is not to answer it, and that the stair, unlike the question, has an end. The author accepts the remark and does not retract the paragraph.
+
+There is a further distinction that Nietzsche did not need and that the present author cannot do without. To be misunderstood is a common misfortune. To be prematurely understood is a rarer and more instructive one, because the premature reader comes equipped with a category, finds the work compatible with the category, and files it there, so that the work is received with an enthusiasm that is indistinguishable, in its effects, from a refusal. The author has repeatedly been called a systems theorist, a philosopher of information, a process metaphysician, a constructivist, and a maker of frameworks. Each of these descriptions has some truth in it, and each has been used to avoid reading the text. The author does not complain. A framework that could not be assimilated to anything would be a framework no one could use, and so the premature reader is a necessary stage in the career of any proposal that survives. The author would prefer, nevertheless, to be refused on the merits, and he has designed the work in the following chapters so that refusal on the merits is possible, by stating what would count against him wherever he is able to say.
+
+The declaration of scope is brief. The author does not claim to have discovered everything. He claims to have asked what would have to hold for a thing to count as having been discovered, and he claims that the question has been asked too rarely by people who possessed the means to check the answers. This is a smaller claim than it sounds and a larger one than it should be. It will be defended in the four books and the interlude, and it will not be proved, and the reader who reaches the epilogue will find that the failure to prove it has been recorded in more places than the attempt.
+
+Some practical matters. The chapters are numbered continuously across the four books. The propositions belong to their chapters and are numbered afresh in each. The statements of non-support belong to the book as a whole and accumulate from the first page, so that their running total is the only continuous quantity the work is able to report. Some propositions are followed by a proof that fails, and others by proofs that succeed, in roughly equal measure, which the formalist has asked to have noted. A single appendix collects the unresolved obligations. The bibliography appears at the end of this same file, in headline case, because the author wishes it to be easy to edit and because he has been told that sentence case in a reference list reads as indifference to the title.
+
+\begin{nonsupport}
+The preface asserts that the author wishes to be refused on the merits. It does not show that he does, and the existence of this very sentence suggests a wish to be seen as one who does.
+\end{nonsupport}
+
+\part{Why I Am So Wise}
+
+\begin{center}\emph{On the unusual circumstances under which an organism becomes an epistemological inconvenience.}\end{center}
+
+\chapter{Why I Have Never Believed in Objects}
+
+The world does not arrive divided into the entities by which people habitually describe it. This is the first thing the author remembers believing, and the memory is unreliable in the usual ways: a belief held at that age cannot have been stated in those words, and the words have been supplied afterward by a person with a motive. What can be said without much risk is that the author found, early, that the nouns of a language behave like a tray of tools laid out by someone else, and that he distrusted the arrangement without being able to say why. A kettle was a kettle until one considered the handle, which could be taken off and was then a handle, and the steam, which was not part of the kettle and yet could not be had without it. Each decomposition produced something that required its own noun, and the nouns did not stop. The phrase that later served as a slogan, that an object should be required to present its credentials, is a refinement of a childhood annoyance.
+
+The philosophical tradition has a familiar way of receiving this annoyance. Quine taught that to be is to be the value of a bound variable, and thereby made the question of what exists answerable to the structure of one's best theory \cite{quine-onwhat}. Whitehead had earlier proposed that the ultimate facts of the world are occasions of experience and that enduring things are patterns among them \cite{whitehead-process}. Spencer-Brown began from the act of drawing a distinction and derived what followed from it \cite{spencerbrown-laws}. The author has read all three, admires each, and wishes to report that he arrived at none of their positions by reading them, a claim that is probably false and certainly unverifiable and that is stated here because the form of the genre requires it.
+
+The grandiose thesis of the chapter is that most of philosophy has been conducted by people who mistook the grammatical convenience of nouns for an ontological discovery. The author asserts this with composure. He is aware that Aristotle, Leibniz, Kant, Russell, and several thousand others noticed the difficulty before him and addressed it with a sophistication he cannot match, and he proposes to proceed regardless, on the principle that being late to a problem is compatible with being right about it, though it is also compatible with being wrong.
+
+The technical content, such as it is, concerns mereology, the formal theory of parts and wholes. Classical extensional mereology, which is one theory of parts and wholes among several, assumes that any collection of things has a fusion and that the fusion is unique, and each assumption has attracted objections that the author finds persuasive in some cases and tiresome in others. His own disposition is to ask what operation produces the boundary. If a boundary is the output of an operation, then the operation can be named, recorded, repeated, or refused, and the object ceases to be a given and becomes a result. This is not a theorem. It is a habit of questioning that the later books will attempt to turn into a method, and the attempt will be described with more confidence than it has earned.
+
+\begin{proposition}[On the Priority of the Boundary]\label{prop:boundary}
+Every object in the author's ontology is the result of a boundary-drawing operation that the author has not yet fully specified.
+\end{proposition}
+
+\begin{proof}
+The proposition is stated as a universal. The author has examined a number of objects and in each case found that some operation could be named. He has not examined all objects, and the proposition as written is therefore a hope with a quantifier attached. The proof does not go through.
+\end{proof}
+
+A word on the technique of this monograph before proceeding. The proposition, the failed proof, and the statement of non-support are three instruments for one task, which is to display a claim together with its exact deficiency. The prophetic voice supplies the claim. The formalist supplies the deficiency. The third voice, the ordinary one, is permitted to observe that a cabinet door hung on the wrong hinge does not become correct by being described elegantly, and that this is among the few results the author holds with confidence.
+
+\begin{nonsupport}
+The childhood memory in this chapter is a reconstruction. It is offered as colour, and no part of the argument depends on its accuracy. If it is inaccurate, the argument is unaffected, which is a mark against the argument.
+\end{nonsupport}
+
+\chapter{Why My Ignorance Has Been So Productive}
+
+The author moved through psychology, linguistics, philosophy, programming, physics, mathematics, and several kinds of building, and at no point accepted that a departmental boundary determined how far an inquiry might go. He did not reject the boundaries on principle. He was, for the most part, uninformed about where they ran. A specialist knows a great deal about what cannot be asked in her discipline, and the knowledge is usually correct, being the residue of many failed attempts by many careful people. The author, lacking the residue, repeatedly committed the impropriety of asking, and was occasionally rewarded with an answer and more often with a polite silence.
+
+Ignorance in this sense is elevated into a disciplined methodological instrument, and the elevation requires immediate qualification. Ignorance is productive only when it is accompanied by a willingness to be corrected, and willingness is cheaper to claim than to exhibit. Lakatos described how a mathematical conjecture survives by absorbing counterexamples and refining its definitions, and the process he reconstructed is one in which the amateur's bold claim and the expert's patient correction are both indispensable \cite{lakatos-proofs}. The author's contribution to this arrangement has been to supply the bold claims at a rate that the corrections cannot match, and to publish them without delay, in a public repository, under a name that is not his own, in the public domain. The arrangement has a certain integrity. It also has a backlog.
+
+The formal education behind the work was ordinary in its credentials and unusual in its path. A bachelor's degree with distinction in psychology and linguistics, a minor in philosophy, a certificate in teaching English as a second language, some years of teaching and grading logic and linguistics: these are documented and unremarkable. Before them came a long period of schooling arranged around monitors rather than teachers, followed by several years at home among the repair and resale of old houses, and a point at which the author discovered that the prescribed curriculum had run out of material before he had run out of questions. The author draws no conclusion from this sequence. The reader will be tempted to draw one, and the temptation should be noted as a reader's habit and not as a finding.
+
+The satirical form permits an inflated version of the same facts. The prophetic voice says that he has overturned the division of labour among the sciences by a combination of insufficient information and unreasonable persistence. The formalist responds that no such overturning has been shown, that the division of labour among the sciences is in large part a matter of tractability and not of prejudice, and that a person who ignores a boundary may simply be on the wrong side of it. Both statements are retained. The ordinary voice adds that in his experience a house will tolerate a great deal of improvised wiring until it does not, and that the failure, when it comes, is not responsive to the intentions of the electrician.
+
+\begin{nonsupport}
+The claim that ignorance has been productive is supported by no measure of productivity other than the number of files produced, which is a measure of output and not of production in any sense that would interest an economist or a mathematician.
+\end{nonsupport}
+
+\chapter{Why I Have Never Trusted an Explanation That Could Not Survive Repair}
+
+A roof leaks at a point that is rarely the point where the water appears inside. The water follows a rafter, runs along a nail, and emerges forty centimetres from the breach. The carpenter who proposes to fix the roof by patching the stain has an explanation, and it is wrong, and the roof will say so at the next rain. This is the first lesson of the physical trades and the one the author values most: the world is a particularly severe peer reviewer, one that does not accept citations, prestige, or elegance in place of a working mechanism. It reports its verdict without reference to the reputation of the person it is judging.
+
+The chapter develops an epistemology of repair. A repair is a hypothesis about where a system departs from its intended condition, together with an intervention that the hypothesis predicts will restore it. The hypothesis is confirmed when the system works and falsified when it does not, and between those poles there is a considerable region of partial success in which the original fault has been masked or displaced and a second fault has been introduced. Anyone who has traced an electrical fault through a house wired by several generations of owners knows that the reasoning is abductive, that the candidates are numerous, and that the ordering of tests matters as much as the tests. The author does not claim that this resembles the reconstruction of an ontology. He claims that the discipline is shared: a proposed explanation must remain answerable to the constraints of the thing it explains, and the constraints do not care how the proposal was reached.
+
+Philosophers of science have said similar things in more careful language. Popper required that a theory prohibit something observable \cite{popper-logic}. Polanyi insisted that skilled practice contains knowledge that cannot be fully stated \cite{polanyi-personal}. Feyerabend, with a more combative intention, argued that no single method has governed the successful episodes in the history of science \cite{feyerabend-method}. The author finds that the trades confirm all three and settle none of the disputes among them, since a roof is a modest instrument for adjudicating the philosophy of science. The roof does, however, enforce a particular honesty. One cannot publish a leak.
+
+The prophetic voice has a proposition to offer. It holds that anyone who has repaired a house is better qualified to reconstruct the foundations of mathematics than anyone who has not, on the ground that the house supplies a constraint the seminar room lacks. The formalist responds at once that the proposition is false, since a good many qualified mathematicians have never held a hammer, and that the author's trade experience is at most a source of analogies, which are a form of illustration and not a form of evidence. The ordinary voice does not respond. It is outside, replacing a section of flashing.
+
+\begin{proposition}[On the Comparability of Roofs and Ontologies]\label{prop:roof}
+Repairing a roof, tracing an electrical fault, and reconstructing an ontology are instances of one discipline.
+\end{proposition}
+
+\begin{proof}
+The three activities share the feature that a proposal is answerable to constraints. They differ in the speed, cost, and clarity with which the constraints respond. A roof answers within a season. An electrical fault answers within the hour. An ontology answers, if at all, within a generation, and in a language that must itself be interpreted. The proposition identifies a similarity and calls it an identity, and the proof is therefore withdrawn.
+\end{proof}
+
+\begin{nonsupport}
+That a trade supplies a constraint is an observation about trades. That the constraint transfers to ontology is a hypothesis. The chapter has not tested the transfer, and its confidence on the point is rhetorical.
+\end{nonsupport}
+
+\chapter{Why My Limitations Have Been My Instruments}
+
+The author reports that he has no mental imagery and no inner speech. When he is asked to picture an apple he does not, and when he is asked what his inner voice says he finds the question has no referent. The conditions have names, aphantasia and anendophasia, and they are better documented than they were a generation ago \cite{zeman-imagery}. Galton, who in the 1880s sent out a questionnaire about the breakfast table and was surprised by the range of what his respondents saw, is the earliest systematic observer of the variation \cite{galton-imagery}. The author came to the question late and with a certain relief. For most of his life he assumed that expressions such as seeing in the mind's eye were figures of speech, and he lacked the evidence to learn otherwise, since there is no way to compare one's own interior with another's.
+
+This chapter offers a philosophical examination of cognition without the presumption that thinking requires internal pictures or a continuous interior voice. The author describes the development of procedural, relational, verbal, and formal methods of reasoning, in which a problem is held not as a scene but as a set of constraints that can be traversed. He describes the flashcard method by which he learned several languages, the repetition of external objects in a deck whose order is deliberately disturbed so that no answer is cued by its neighbour, and the practice of preferring the shuffled deck to the ordered one because order is a form of leakage. He describes the programming languages he prefers, which are those with little ceremony and a great deal of composition. None of these facts support a theory. They are offered because a philosophical autobiography without any ordinary detail is an essay in costume.
+
+The satirical culmination is a solemn declaration that the absence of certain familiar cognitive experiences has spared the author from mistaking them for the structure of reality itself. He is prepared to defend this as a rhetorical position. He is not prepared to defend it as a psychological one, because the defence would require a comparison among interiors that no one can perform. Dennett's method of heterophenomenology, which treats a subject's reports as data to be interpreted and not as infallible access to the underlying process, is a useful caution \cite{dennett-consciousness}. The author's reports about his own thinking are reports, produced by a process that may differ from the process they describe, and the difference is the subject of the later monograph on self-report that the author has not yet written.
+
+There is a modest argument underneath the comedy. If thinking is not intrinsically pictorial or verbal, then the forms in which thought is externalised, whether diagrams, formulas, code, or prose, are not translations from an interior original but the working medium itself. The author has therefore treated the writing of an essay as an act of construction and not an act of transcription. This is not unique to him, and many writers have said as much, but he has found it a convenient description of what happens when the essay contains a distinction that was unavailable before the sentence containing it was written.
+
+\begin{nonsupport}
+The claim that the author's cognitive profile is an instrument and not an obstacle is unsupported by any comparison with a counterfactual author. The two authors cannot be run in parallel, and the monograph declines to pretend that it has run them.
+\end{nonsupport}
+
+\part{Why I Am So Clever}
+
+\begin{center}\emph{Concerning the invention of instruments for problems that other people have not yet admitted exist.}\end{center}
+
+\chapter{Why I Have Replaced Things with Distinctions}
+
+The first major theoretical chapter introduces the recurring concern of the author's work, which is the conditions under which a difference can be maintained. A distinction is not a thing. It is a relation that holds between a region and its surroundings, together with whatever operations are required to keep the relation holding while the region and its surroundings change. A cell membrane, a legal boundary, a file name, a personal identity, and the edge of a wave packet are all, on this description, distinctions that persist because something is continuously done to them. When the doing ceases, the distinction dissolves, and what had been an object becomes a memory of one.
+
+The author calls a distinction admissible when it survives a stated class of transformations, and he asks of any proposed identity what class of transformations it is meant to survive. The question has a respectable ancestry. Mac Lane's account of categories shifted attention from the objects of mathematics to the structure-preserving maps among them \cite{maclane-categories}, and Lawvere pursued the thought into foundations by taking functions and not membership as primitive \cite{lawvere-etcs}. The author is not a category theorist, and his use of the vocabulary is of the kind that practising category theorists tolerate with visible effort. He claims, in his defence, that the habit of asking what a transformation preserves is available to anyone and was not invented in mathematics.
+
+The ceremonial declaration of the chapter is that he did not abolish the object but demanded its credentials. The formalist adds, in a footnote, that a demand for credentials is a procedural step and not a metaphysical conclusion, that the credentials in question have not been specified in sufficient detail to be demanded, and that a sufficiently strict application of the demand would exclude the author's own concept of a distinction, which was introduced without credentials in the paragraph above.
+
+This is the first point at which the monograph's method becomes visible as a method. The prophetic voice states that ontology must attend to the operations that establish and preserve distinctions, and that the failure to do so has produced two thousand years of confusion about what things are. The formalist replies that the claim of confusion is not argued, that what has been shown is that one family of questions becomes tractable under one family of definitions, and that tractability is a virtue of a framework and not a proof of its truth. The ordinary voice, which has built a fence, adds that a post is held in place by the ground, the concrete, and the load it carries, and that no one asks whether the post is a post except in a seminar.
+
+\begin{proposition}[On Admissibility]\label{prop:adm}
+A distinction is real to the degree that it survives the transformations it is required to survive.
+\end{proposition}
+
+\begin{proof}
+The proposition defines reality relative to a class of transformations that the proposer chooses. A different choice yields a different reality. The proposition is therefore a convention, and a convention cannot be proved true, though it can be adopted. The formalist is careful to say what this does not show. It does not show that the convention cannot be defended: its consistency, its nontriviality, its fruitfulness, and its consequences can all be investigated, and the proposition below does some of that work. The absence of a theorem is not the absence of a rational defence. The author has adopted the convention, and the proof is accordingly replaced by a notice of adoption and a promise of such an investigation.
+\end{proof}
+
+\begin{proposition}[On Faithful Transformations, Established]\label{prop:faithful}
+Let $X$ be a set and $\sim$ an equivalence relation on $X$, standing for the identifications that a distinction makes, so that $x\sim y$ means that $x$ and $y$ are not distinguished. Call a map $t\colon X\to X$ \emph{faithful} to $\sim$ if for all $x,y\in X$ we have $x\sim y$ if and only if $t(x)\sim t(y)$. Then the faithful maps form a monoid under composition. Moreover a constant map respects $\sim$, in the sense that $x\sim y$ implies $t(x)\sim t(y)$, but is faithful only when $\sim$ has a single class.
+\end{proposition}
+
+\begin{proof}
+The identity map is faithful. If $s$ and $t$ are faithful, then $x\sim y$ holds if and only if $s(x)\sim s(y)$, which holds if and only if $t(s(x))\sim t(s(y))$, so $t\circ s$ is faithful, and composition is associative because composition of functions is. A constant map sends every pair to a pair of equal elements, which are related by reflexivity, so it respects $\sim$. If it were also faithful, then every pair $x,y$ would satisfy $t(x)\sim t(y)$ and hence $x\sim y$, so $\sim$ would have one class.
+\end{proof}
+
+\begin{concession}
+The formalist has examined the proposition and its proof and finds no error. The result is true for every set and every equivalence relation, and it is not idle, because it exposes a defect in the preceding proposition: to say that a distinction survives a transformation was ambiguous between preserving the identifications and preserving the differences, and under the weaker reading a map that collapses everything to a point survives every distinction there is. The author had used the word survives for a long time without noticing this. The formalist records that the result is elementary and standard in the theory of equivalence relations and structure-preserving maps, and that the author has rediscovered a small piece of well-known mathematics by a route of his own. The prophet asks that the word rediscovered be replaced by the word confirmed. The formalist declines.
+\end{concession}
+
+\begin{nonsupport}
+The chapter has not shown that distinctions are more fundamental than objects. It has shown that the author prefers to begin with them, and that the preference has been productive for the author, which is a statement about the author.
+\end{nonsupport}
+
+\chapter{Why I Have Given History the Last Word}
+
+A description of a system at one instant often fails to determine how the system arrived there. Two piles of ash may be indistinguishable and have different causes, and two bank balances may agree and have different histories of deposit and withdrawal. The author's work on append-only records, irreversible operations, deterministic replay, and identity through accumulated transformation proceeds from the conviction that an instantaneous description is frequently insufficient for the questions people actually ask, and that the missing information is the sequence of operations. This conviction is not original. It is the working principle of the ledger, the commit log, the laboratory notebook, and the chain of custody, and the author has supplied only a vocabulary and a habit of insisting on it.
+
+The author's calculus, which he calls SpherePOP, takes scopes as primitive and treats the closing of a scope as an irreversible event in a recorded sequence. The calculus is under development and the author has taken care in other places to say what it is and what it is not: it is a formal system whose properties are being established, and it is not yet a theory that has earned the right to be called foundational. The present chapter is concerned only with the philosophical motivation. If identity through time is partly constituted by an admissible history, then a thing whose history has been lost or falsified is, in a precise sense, a different thing from one whose history is intact, even if the two cannot be told apart by inspection. Parfit's puzzles about personal identity pressed a version of the same question, by asking what matters when continuity of a person can be separated from their sameness \cite{parfit-reasons}. The author does not claim to have resolved those puzzles. He claims only that a ledger-style account makes some of them easier to state.
+
+I have given history the last word because everything else has already been said and has left no forwarding address. Consider what you call the present: a thin and trembling surface, a membrane stretched across a pit of accomplished operations, and you propose to know what it is by looking at it. You look; it is gone; another has taken its place and wears its face. What you were looking at was never a thing. It was a verdict, delivered by a court that has since adjourned and kept no minutes. I have kept minutes. Let this be my offence against the metaphysicians of the instant, that I insisted upon the minutes, and let them say that I loved the archive too well; I say that the archive was the only part of the world that was not pretending. Every state that has ever deceived anyone did so by concealing how it arrived, and every honest thing, every ledger, every stone wall, every weld, shows its seams to whoever cares to look. I do not say that being is history. I say that being, asked for its papers, produces history, and that those who ask for nothing else deserve what they get, which is the present, forever, with no explanation attached.
+
+The satirical proposition is that previous philosophers repeatedly asked what a thing was while neglecting to inquire whether it possessed an admissible history. The author delivers this indictment with the gravity of a prosecutor. The formalist observes that historians of philosophy have devoted a great deal of attention to genealogy, that Nietzsche himself wrote a book about it \cite{nietzsche-genealogy}, and that the novelty claimed here is therefore a novelty of notation. The prophetic voice accepts this correction with grace, and proceeds to claim the notation as a historical achievement.
+
+There is a practical consequence the author takes seriously. Much contemporary computing, particularly in the generation of text and images by statistical models, produces outputs whose provenance is unrecorded. An output that cannot be traced to its inputs and operations cannot be audited, corrected, or responsibly relied upon, however fluent it is. The preference for histories is thus not only a metaphysical stance but a procedural demand, and the demand is the part of the framework that the author is most willing to defend before a hostile audience, because it can be implemented and the implementation can be inspected.
+
+\begin{proposition}[On the Last Word]\label{prop:history}
+The identity of a system is determined by its admissible history.
+\end{proposition}
+
+\begin{proof}
+The proposition is true for ledgers and false for stones. Whether it is true for persons depends on the theory of persons, which the proposition was supposed to help select. The argument is circular, and the circle is noted without apology.
+\end{proof}
+
+\begin{proposition}[On the Insufficiency of State, Established]\label{prop:state}
+Let a history be a finite sequence of operations, each of which adds an integer to a running total, and let its state be the final total. The map from histories to states is not injective.
+\end{proposition}
+
+\begin{proof}
+The history consisting of adding five and then adding three, and the history consisting of adding ten and then adding negative two, are distinct sequences. Each ends in the state eight.
+\end{proof}
+
+The proposition is trivial, and the author is pleased to have a trivial proposition for once that is also true. It invites a question that can be answered by building something. Suppose that each operation is appended to a record together with a digest computed from the digest of the previous entry and the operation itself, so that the head of the record depends on the whole sequence in order. Such a structure is old, and its common name is a hash chain. The author wrote a small program to see whether it would behave as the philosophy required, and the program is reproduced in Appendix~C. Its results are reported without adornment. For the two histories of the proof, the final states were equal and the chain heads were different. Replaying one history a thousand times produced a single chain head. For a history of one hundred operations, altering any one of them by one unit produced a different head in every one of the hundred cases tried. Reversing the order of that history left the state unchanged and changed the head.
+
+\begin{concession}
+The formalist has run the program and obtained the same output. The experiment worked, and the formalist records that it worked. The formalist adds three qualifications, which the author accepts. The construction is a standard one and is the basis of version control systems and of several better-known technologies, so the experiment shows that the author's philosophical claim has an implementation and does not show that the claim is new. A hundred detected alterations form a finite check and not a proof, and the guarantee of tamper evidence rests on the assumed collision resistance of the digest function, which is an assumption and not a theorem. And the chain head distinguishes histories without saying which is the correct one, or why, which is the question the philosophy was supposed to be about. Three properties must be kept apart here. Integrity is the property that a recorded sequence has not changed relative to a commitment made earlier, and the chain supplies evidence of it. Authenticity is the property that the operations were truthfully recorded, and the chain says nothing about it. Completeness is the property that no relevant event was omitted, and the chain says nothing about that either, nor about whether the initial commitment deserved trust. A compacted summary of a long session is vulnerable on all three counts, and the chain addresses only the first. The prophet observes that for once the formalist has been obliged to begin a paragraph with the word worked.
+\end{concession}
+
+\begin{nonsupport}
+The chapter does not establish that history is metaphysically prior to state. It establishes that for certain engineered systems the record is more useful than the snapshot, which is true and which no one disputes.
+\end{nonsupport}
+
+\chapter{Why I Have Made the Plenum Unavoidable}
+
+The RSVP framework is an attempt to understand physical organization through three fields, a scalar capacity, a vector flow, and an entropy, together with the constraints that bind them. The exposition here is kept modest, because the framework's standing is that of a proposal and not an accepted theory. The scalar field is read as the capacity of a region to sustain structure, the vector field as the directed transport of whatever the capacity supports, and the entropy as the measure of what has been dispersed. The three are coupled by equations whose forms resemble those of continuum mechanics, and the resemblance is both the reason to take the proposal seriously and the reason to distrust it, since many formal systems resemble continuum mechanics without describing anything.
+
+The cosmological ambitions of the framework are real and unreached. It aims to account for large-scale structure and for the apparent smoothness of the early universe without recourse to some of the standard assumptions, and it has not, at the time of writing, been brought into quantitative contact with the data that would test it. The community that does the testing has its own instruments, its own methods, and its own entirely reasonable standards for what counts as a prediction. The author is an independent researcher with no institutional affiliation, and the ordinary routes by which a proposal acquires credibility, namely submission, review, seminar, and replication, are routes he has chosen not to take in the usual form. This is a choice with costs, and the costs are borne by the framework.
+
+The grandiosity emerges from the contrast between the scale of the aim and the scruple of the admissions. The prophetic voice declares that the plenum, the continuous medium from which structure is carved, has been made unavoidable. The formalist responds that nothing has been made unavoidable, that a plenum is one of several available formal backgrounds, and that the argument for preferring it consists in part of the observation that it makes the author's other frameworks easier to relate. A referee would call that an aesthetic consideration. The author calls it that too, and adds that aesthetic considerations have a mixed record in physics, having led to some of its best theories and some of its longest detours.
+
+The standard against which the framework must be measured is the standard Popper described, that a theory must forbid something an observation could show \cite{popper-logic}. The author acknowledges that the framework in its present state forbids very little, and that the forbidding is the work that remains. He has a list of obligations, each a place where an equation must be matched to a measurement, and the list is an appendix of this monograph because he considers it the most honest thing in the book. Whitehead's attempt at a process cosmology is the historical cautionary precedent, a system of great architectural beauty whose empirical consequences were never sharply drawn \cite{whitehead-process}. The author would like to do better and is unsure that he will.
+
+The toy form of the proposal that the author is prepared to write down is the following. Let $\Phi$ denote the scalar capacity, $\mathbf v$ the vector flow, and $s$ the entropy density, each a function of position and time, and suppose that
+\[
+\partial_t \Phi + \nabla\!\cdot(\Phi\,\mathbf v) = 0,
+\qquad
+\partial_t s = \sigma,\quad \sigma \ge 0,
+\]
+so that capacity is transported by the flow without creation or loss, and entropy is produced at a nonnegative rate. These are the weakest equations consistent with the verbal description, and they omit the couplings among the three fields that give the full proposal its content. About them one thing can actually be proved.
+
+\begin{proposition}[On Conserved Capacity, Established]\label{prop:capacity}
+Let the domain be a closed manifold, such as a torus, and let $\Phi$, $\mathbf v$, and $s$ be smooth and satisfy the equations above. Then $\int\Phi\,dx$ is independent of time, and $\int s\,dx$ is nondecreasing in time.
+\end{proposition}
+
+\begin{proof}
+Differentiating under the integral sign, $\frac{d}{dt}\int\Phi\,dx = -\int\nabla\!\cdot(\Phi\,\mathbf v)\,dx$, which vanishes by the divergence theorem because the domain has no boundary. Similarly $\frac{d}{dt}\int s\,dx = \int\sigma\,dx \ge 0$.
+\end{proof}
+
+One coupling can be indicated, to show what has been postponed. Suppose the flow is driven down the gradient of the entropy, $\mathbf v=-\kappa\nabla s$ with $\kappa\ge 0$, and suppose entropy is produced at the rate $\sigma=\kappa\,\Phi\,|\nabla s|^{2}$, where $\Phi$ is nonnegative, as the transport equation preserves it along the flow if it is nonnegative at the start. Then $\sigma\ge 0$, the continuity equation is unchanged in form, and both conclusions of the proposition continue to hold. What the coupled system must still supply is a reason to choose this closure and no other, and a comparison with observation, and neither is offered here.
+
+\begin{concession}
+The formalist grants the proposition and notes that its assumptions are stated and sufficient. The formalist also notes that it is true of every continuity equation on every closed manifold, that it therefore says nothing about the universe, and that it concerns the toy form and not the coupled system. The prophet replies that a plenum which conserves what it carries is, for a first day's work, not nothing.
+\end{concession}
+
+\begin{nonsupport}
+The chapter does not show that the RSVP fields correspond to physical quantities. It states the proposed correspondence and lists the tests that would be needed. None has been carried out.
+\end{nonsupport}
+
+\chapter{Why My Systems Refuse to Remain Separate}
+
+The author has produced a number of formal and computational projects, among them a system for structured specification of claims, a family of text and image tools, a protocol for distributed computation on existing hardware, a hardware architecture for pneumatic paper robots, and a memory system with a name composed largely of punctuation. The projects were begun for particular reasons and in no particular order. When he surveys them he finds that they share a recurring concern with persistence, selection, constraints, transformation, and recoverability. He does not assert that they are instances of one mathematically established theory. He asserts that they are the work of one person with one set of habits, and that habits are a kind of unity, though a weaker one than the unity of a theorem.
+
+This distinction between the unity of a habit and the unity of a theory is the content of this chapter, and it should be read slowly. A reader who sees a family resemblance among a person's projects may be perceiving a real structure or may be projecting one, and the evidence available from the outside, which is a directory of repositories, does not discriminate. Wittgenstein's remarks on family resemblance are the standard warning that a set of items may be related without any single feature running through them \cite{wittgenstein-investigations}. The author finds the warning salutary and ignores it at intervals, as the rhetorical form requires.
+
+The rhetorical climax is that the author has not suffered from a proliferation of unrelated interests. The disciplines have suffered from the historical inconvenience of being separated. The formalist observes that this sentence is a very efficient way to avoid having to decide whether the interests are related, since it converts the lack of a demonstrated relation into a complaint about the field. The author concedes the observation and notes that the sentence will remain in the text, as an instance of the technique under study.
+
+The honest description is more modest and, to the author, more interesting. Over a long period of working in public, he has found that a project which begins as an exercise in one area acquires a vocabulary that is then borrowed by a project in another area, and that the borrowing is often productive and sometimes embarrassing. A notion of scope developed for a calculus turns up in an argument about how a research community should record its claims. A notion of constraint developed for a physical model turns up in a discussion of how an economy should account for built capacity. Each such crossing is either a discovery or a pun, and the author claims no special ability to tell the difference. The corpus is, in effect, a long record of attempts to make that discrimination, and many of the attempts have been left in the repository in their unfinished state.
+
+One crossing can be examined closely, because it left a trace that can be checked. The result of the chapter on history, that a state does not determine the history that produced it, was proved for running totals of integers. The same proposition, with the same proof and no change to its steps, applies to the problem that arises when a long session of work is compacted into a summary: two different transcripts may be compacted to identical summaries, so the summary, which is a state, cannot say which transcript, which is a history, it came from. The hash-chain construction of the experiment then carries over as well, since a digest computed over the transcript detects any alteration that a comparison of summaries would miss. The test applied here is stricter than resemblance. A crossing counts as a discovery if a proof or a construction from one project is carried to another with its steps intact, and as a pun if only the vocabulary travels. By that test this crossing is a discovery, though a small one, since the proposition is trivial and the construction is standard. The formalist adds that one such case does not establish that the projects form a theory, and that the other crossings in the corpus have not yet been put through the test.
+
+\begin{nonsupport}
+The chapter has not shown that the projects share a structure. It has shown that the author recognises one, which the reader may take as a datum about the author or as a reason for caution.
+\end{nonsupport}
+
+\chapter{Why I Have Never Had an Original Thought}
+
+The author has never had an original thought, and he reports the fact as a boast, because a person who can say it with precision has done the work of tracing his thoughts to their sources, and most people who claim originality have not. The distinction he took from Spencer-Brown, who began from the act of drawing one \cite{spencerbrown-laws}. The habit of asking what a transformation preserves he took from the mathematicians who made it a method \cite{maclane-categories}. The practice of letting a conjecture be improved by its counterexamples he took from Lakatos \cite{lakatos-proofs}, and the ledger from whoever first kept accounts on clay. Each thought, examined singly, is a loan with a traceable lender. What the author claims is the arrangement, a particular recombination of borrowed parts that he has not seen assembled in this way, and he is aware that a claim of this form is exactly what an unread person would make.
+
+The ordinary voice has a view, and it concerns a market booth. For about a decade the author sold paintings at one, and the work was governed by what customers said. A remark about reptiles produced a figure with reptilian proportions. A photograph handed over was replicated, or combined with a second photograph into one picture. A request for a dragon of enormous length was met with a dragon of enormous length, painted in about an hour, on a canvas brought for the purpose. The author could repaint anything he had painted before, and nobody at the booth ever asked whether a painting was original. They asked whether it could be larger. The prophet takes this as proof that originality is a vanity of the studio and not a requirement of the work. The formalist says that it proves only that customers do not ask the question, and the ordinary voice, which has finished the dragon, does not reply.
+
+\begin{quotation}\noindent I have never had an original thought, and I advise you to be afraid of anyone who claims to have had one, because he has not read enough to know that he has been anticipated, and the man who has not been anticipated has simply not been paying attention. I have been anticipated by Greeks, by clerks, by a monk who counted the stars, and by a boy with a soldering iron, and I regard each of them as a colleague who died before I could thank him. What I have done is to stand where they all stood and notice that they were facing in different directions. That is the entire invention. It is not nothing; it is a compass, and a compass has never been accused of originality, and no one has ever mistaken it for a mountain, and every traveller has been grateful for it in the end.
+\end{quotation}
+
+The formalist, who has been waiting, supplies a definition. Call a corpus $C$ a set of results already available, and let $\mathcal O$ be a stated family of operations by which new results may be derived from old ones, such as instantiation, composition, analogy, and recombination. Write $\mathrm{cl}(C)$ for everything obtainable from $C$ by repeated application of operations in $\mathcal O$. A result $r$ is \emph{original relative to} $C$ if $r\notin\mathrm{cl}(C)$. Originality is thus a relation among a result, a corpus, and a family of operations, and it is not a property of the result alone.
+
+\begin{proposition}[On the Decay of Originality, Established]\label{prop:originality}
+If $C\subseteq C'$ and $r$ is original relative to $C'$, then $r$ is original relative to $C$.
+\end{proposition}
+
+\begin{proof}
+Since $C\subseteq C'$, every result obtainable from $C$ by operations in $\mathcal O$ is obtainable from $C'$, so $\mathrm{cl}(C)\subseteq\mathrm{cl}(C')$. If $r\notin\mathrm{cl}(C')$, then $r\notin\mathrm{cl}(C)$.
+\end{proof}
+
+\begin{concession}
+The formalist records that the proposition is elementary and true, and draws the consequence that it favours the author's earliest claims. A result judged against a small corpus is more likely to count as original, and the author's corpus, in the early years, was small. As he read more, claims that had seemed original ceased to be so, and the proposition says this can only happen in one direction. The formalist adds that the definition makes originality depend on what the claimant has read, which is the thing the claimant is worst placed to know. The prophet asks that the word compass be allowed to stand. The formalist allows it.
+\end{concession}
+
+\begin{nonsupport}
+The chapter has not shown that the author's arrangement of borrowed parts is new. It has shown that, relative to a corpus he cannot fully list, he has no means of showing that it is not.
+\end{nonsupport}
+
+\part{Why I Write Such Excellent Books}
+
+\begin{center}\emph{On the inability of conventional literary categories to accommodate the quantity of explanation required.}\end{center}
+
+\chapter{Why I Have Never Written Merely to Communicate}
+
+Nietzsche held that a style is good if it conveys an inner state accurately, and that there are as many styles as there are inner states \cite{nietzsche-ecce}. The author finds the thesis attractive and applies it to himself with an awkwardness that the genre requires. Whatever his inner state may be, it is not available to him as an image or a voice, and the style that carries it is therefore less a translation than a manufacture. Writing is the activity in which the state is produced. An essay begins as a set of constraints and a direction, and a distinction that did not exist at the start is present at the end, and the sentence that introduced it is the only place it can be found.
+
+The author has come to believe that an argument sometimes requires a new vocabulary and not merely a more graceful presentation of an existing one. This belief has been expensive. A new term costs the reader an effort of acquisition, and the effort is justified only if the term does work that older terms cannot. The author's record on this point is mixed. Some of his terms, such as admissibility and the distinction between a state and its history, have repaid the effort. Others were coined in a mood of expansion and have the appearance of a handle with nothing attached to it. A short disciplinary rule has therefore emerged: a coinage must be defined where it first appears, used at least twice, and removable if the argument can be restated without it. The rule is followed unevenly.
+
+The prose is meant to move between exact analysis and extravagant declaration, with the second held to a single sentence wherever possible. This is a matter of paragraph engineering, and the author has opinions about it. A long academic paragraph carries an argument through its qualifications, and a string of short sentences, however punchy, tends to assert conclusions that the qualifications would have complicated. The author has accordingly come to dislike the clipped manner of the contemporary professional essay, in which every sentence is a slogan and every paragraph an advertisement for the next. He has also come to dislike the habit, now widespread, of reading a certain punctuation mark as evidence that a text was written by a machine, and has revised his own practice in response, with a resentment he finds instructive.
+
+I have never written merely to communicate, and I will say why: communication is what remains of writing after the writing has been done to someone else. I write in order that a thing may become possible that was not, and the sentence is the tool, the paragraph the workbench, and the essay the only room in which that particular possibility can be stood up and inspected. Hear the music of it. There is the short sentence, which is a knife. There is the long sentence, which is a river, and whoever has stood in a river knows that it does not ask permission of the banks. There is the semicolon, that hinge on which a whole argument may be made to swing without being broken; there is the colon, which is a door held open; there is the footnote, which is the cellar, and in the cellar I keep what the house depends on and the guests are never shown. They have called my paragraphs long. They are long because the thought is long, and because I have seen what becomes of a thought that is cut at every full stop in the name of the attention of a stranger who is already scrolling away. I would rather be unread by a patient reader than read by an impatient one and understood by neither. Let every writer who has sacrificed a qualification to a rhythm come forward and confess it here, and I will absolve them, for I have done it myself, and the qualification is still waiting at the bottom of the page.
+
+The formalist, consulted, observes that the passage contains five metaphors for the sentence and no claim about it that could be false.
+
+There is a risk in a chapter such as this, which is that it makes the author the protagonist of his own method. He has been wary of first-person framing for exactly that reason, finding it self-serving, and prefers to ground claims in textured particulars and leave the narrator in the background. The monograph is an exception that proves the rule: it is written in the first person because the form demands it, and the form is a parody of the habit he distrusts. The reader should therefore regard every occurrence of the pronoun in these pages as a quotation of a genre, and not as a statement of the author's preferred manner of writing.
+
+The ordinary voice, which is permitted to speak here once at some length, recalls a small folk festival with two stages that alternated, so that one band played while the other set up, and a person with a table of paint could finish a painting in the span of a set. There were about six paintings in a day, and on some nights six or seven were in progress at once: a forest, a dinosaur drinking at a river, a rocket on its way to the moon, each begun and abandoned and returned to, and for most of a set none of them could be said to be a painting of anything. The subject was kept ambiguous deliberately, and new objects were put in partway through so that no onlooker could tell what the piece would become. A spectator once asked whether the painter could see the painting before making it. The answer was no, and it was given sincerely, and the question seemed ridiculous, since it had not occurred to the author that anyone could. The prophet takes the episode as a demonstration of deferred commitment in a physical medium. The formalist takes it as an anecdote. The ordinary voice does not take it as anything. It was paint, and music, and a field.
+
+\begin{proposition}[On the Productivity of Writing]\label{prop:writing}
+An essay can generate distinctions that were not fully available before its composition.
+\end{proposition}
+
+\begin{proof}
+Examples are abundant in the history of mathematics and philosophy, and the author has noticed the effect in his own work. An example is an illustration and not a proof, and a universal claim about essays cannot be established by the experience of one essayist. The proposition is retained as a description of a practice and is withdrawn as a theorem.
+\end{proof}
+
+\begin{nonsupport}
+The chapter asserts that the author's manner of writing is a method. It has not compared that manner with any other, and a method that has been compared with nothing is a custom.
+\end{nonsupport}
+
+\chapter{Why My Books Have So Many Appendices}
+
+The appendix is a philosophical category. It is the place where a proposition meets the conditions under which it could be wrong, and the author has come to believe that the quality of a theoretical work can be estimated, crudely, by the length and candour of the material at the back. A text that ends with its conclusion has claimed that nothing remains to be examined. A text that ends with a ledger of unresolved obligations, a list of countermodels, a record of experiments that failed, and a table of dependencies among its own lemmas has acknowledged that the conclusion is a waypoint. The author's books therefore have many appendices, and he has been told that they are longer than some of the chapters, which he regards as a compliment and which was not intended as one.
+
+Formal verification supplies the model. In a proof assistant such as Lean a statement is accepted only if every step is checked against a small trusted kernel, and what the assistant verifies is the derivation and not the faithfulness of the statement to the thing it was meant to describe. The distance between a verified theorem and a correct formalisation of an informal claim is one of the more neglected problems in the field, and the author has written about it elsewhere at length. For present purposes it suffices to observe that a formal proof is the most scrupulous form of appendix, and that the scrupulousness is partial: it guarantees that the proof is valid and does not guarantee that the question was the right one.
+
+The author holds that his intellectual modesty is not absent but has been relocated from his rhetorical declarations to his verification procedures. A proof of the thesis follows, in a form that the formalist finds admirable and the prophet finds humiliating. The relocation thesis is plausible, and also unfalsifiable as stated, since any display of immodesty can be assigned to the rhetoric and any display of modesty to the procedure. The author recognises that a thesis which survives all evidence by reallocating it has the structure of a bad theory, and he has retained it because the badness is instructive.
+
+\begin{proposition}[On Relocated Modesty]\label{prop:modesty}
+Let $R$ denote the rhetorical declarations of the author and $V$ his verification procedures. The author's total modesty $M$ is conserved under the transformation that shifts content from $R$ to $V$.
+\end{proposition}
+
+\begin{proof}
+No measure of modesty has been defined, and it is not stated how modesty could be added across $R$ and $V$. A conservation law requires a quantity, and none is available. The proposition is a joke with a symbol in it. It is retained for the sake of the genre and offered with the reminder that the symbols give it an appearance of rigour that it has not earned.
+\end{proof}
+
+A box survives in a cupboard, labelled with a language and the years 2007 to 2009, and it contains thousands of handwritten index cards, a word on one side and its sense on the other, worn at the edges by being flipped, with the missed cards moved to the bottom of the deck and the mastered decks set aside. It is an appendix in the original sense of the word, a thing appended, material and not conceptual, and none of the three voices can verify what it caused. It does have a weight, and it can be lifted. The formalist asks that it be recorded that a box of cards is evidence that the cards were made and not that the language was learned. The prophet asks that it be recorded that the language was learned. The ordinary voice would like the box returned to the cupboard.
+
+The appendices of this monograph are accordingly not decorative. Appendix A collects the unresolved obligations of every proposition, each stated as a task. Appendix B lists the readings of the title that the author has considered and rejected. The author has resisted the temptation to add an appendix cataloguing the appendices, though he has drafted one, and the draft is somewhere among the files.
+
+\begin{nonsupport}
+The location of modesty is not a measurable property. The chapter's thesis about it cannot be tested, and is not meant to be.
+\end{nonsupport}
+
+\chapter{Why My Errors Have Better Documentation Than My Successes}
+
+The public repository in which the author works records every revision, and it records the failures more carefully than the successes. A conjecture that was stated, found false, and replaced leaves a trail of dated files, each marking a position the author held and then abandoned. A result that was right on the first attempt leaves a single file and no history, since there was nothing to revise. The consequence is odd. The most detailed documentation in the corpus concerns what did not work, and a reader who wished to learn the author's actual standing would do better to study his errors than his conclusions.
+
+This is a trade truth before it is a philosophical one. When a wall in an old house is opened, the framing shows every previous repair, and the failed ones are legible: the patch that did not hold, the second patch over the first, the third that finally did. The successful repair is invisible, because it works, and a repair that works leaves nothing to look at. A carpenter learns the history of a house from its failures, and the lesson is that a record built by repair is a record of what went wrong.
+
+The prophet declares the arrangement a glory. Let others, he says, publish only what stands. He has put his ruins on public view, and the ruins are the monument, since any fool can display a finished building and only a person of some seriousness will exhibit the scaffolding, the false starts, and the wall that had to come down twice. The formalist replies that the declaration is the kind of thing a person says to avoid being asked how many of the ruins were avoidable, and then turns to what can be established about records of failure.
+
+\begin{proposition}[On the Denominator, Established]\label{prop:denominator}
+Let a record contain every attempt, each labelled a success or a failure. Then the proportion of successes is computable from the record. If the record omits the failures, then the proportion of successes is not computable from the record.
+\end{proposition}
+
+\begin{proof}
+The proportion is the number of successes divided by the number of attempts, and the number of attempts is the number of successes plus the number of failures. A complete record supplies both counts. A record that omits failures supplies the numerator and not the denominator, and for every value of the numerator, any proportion in a nonempty range is consistent with some number of omitted failures.
+\end{proof}
+
+\begin{concession}
+The formalist grants the proposition and applies it to the corpus with some discomfort. The author's record is not complete. Some essays were deliberately deleted, and the deleted ones are the one part of the record that is absent, so the denominator cannot be recovered even from a repository that has kept everything else. The labels are also supplied by the author, who decides what counts as a failure, and a record whose labels are assigned by the party being assessed is a record with a conflict of interest. The formalist notes that the author has been generous to himself in one respect and strict in another: he has kept his errors, which is the harder thing, and he has chosen which to delete, which is the easier. The prophet asks that the first half of the sentence be quoted separately. The formalist declines to promise.
+\end{concession}
+
+There remains a point about authorship that the author finds more interesting than the comedy. If the record of failed conjectures is part of what a person has authored, then authorship is not the production of finished results but the maintenance of a process in which results are made, tested, and unmade, and the person is better identified with the process than with its outputs. This is congenial to the author's other commitments, and it is also convenient, since it allows an unfinished state to be described as a form of authorship. The convenience is entered here as a suspicion and left there.
+
+\begin{nonsupport}
+The chapter has not shown that the author's errors are more informative than his successes. It has shown that they are more fully recorded, which is a statement about the record.
+\end{nonsupport}
+
+\chapter{Why I Have Written More Than One Book at a Time}
+
+An ordinary literary career produces a body of collected works at its conclusion. The author has attempted something different, which is to make the collected works into a continuously operating research instrument, in which essays, monographs, code, experiments, and revisions are held in a single public repository and are subject to the same discipline of timestamping and version control. The arrangement has the advantage that the history of each idea is recorded, and the disadvantage that the repository grows without the editorial pruning that a conventional publisher would apply. He has chosen the disadvantage, on the ground that the record is more valuable unpruned, and that pruning is a task better done by a reader with a purpose.
+
+The result is a corpus with a peculiar shape. Several hundred essays and monographs sit in public, each of them in some stage between sketch and near-completion. The author regards nearly all of them as active, unless he has deliberately deleted them, and regards those he has not touched for a while as paused for lack of time, not abandoned. Many could use more references and more detail, which he expects to add when he has more computing resources, or by crowdsourcing, with different people improving different parts. The inventory is not a bibliography of finished works. It is a map of an inquiry in progress, a portfolio of the kinds of projects he likes to do, version-controlled and dated.
+
+He has also found that the abundance is a problem. Ideas that seemed distinct a year earlier have turned out to be neighbours, and he has begun the tedious and rewarding work of merging related essays into single, extended, self-contained pieces, in preference to keeping separate companions that each require the reader to have read the others. The movement toward consolidation is a movement against his own tendency to proliferate, and it is not complete. The ordinary voice reports that the same thing happens in a workshop, where tools accumulate until a day arrives on which they must be sorted, and that the sorting reveals which tools were used.
+
+The philosophical interest of the arrangement lies in what it implies about authorship. A corpus that is revised continuously has no final text, and the relation between a reader's copy and the author's present state is a relation between a snapshot and a history. The author finds this congenial, having already committed to the claim that histories matter. He is aware that the position is convenient, since it excuses incompleteness as a principle, and the convenience is noted under suspicion. A work that is never finished may be a work whose author finds finishing unpleasant. The remedy is not rhetorical. It is to finish some of them.
+
+\begin{nonsupport}
+That a living corpus is a research instrument is a hypothesis about the corpus. The chapter does not show that any result has been obtained by the instrument that could not have been obtained by writing finished books.
+\end{nonsupport}
+
+\chapter{Why I Have Mistaken Proliferation for Progress}
+
+At one stage the author planned to produce between ten thousand and a hundred thousand paintings, and he proposed to do so by painting very large, four or five feet or more, and cutting each canvas into pieces. The arithmetic was attractive. Large painting was faster than small, since a roller and a succession of smaller brushes engaged the whole arm and not only the wrist, and each large canvas yielded many pieces, and each piece was a painting. The number of paintings could be made to rise without limit by sharpening the knife. At no point did the plan require that anything more be painted.
+
+The author regards the episode as the clearest diagram he possesses of a mistake he has made in other media. A count of objects is a count of the decisions about where to cut. The frameworks, essays, and repositories of the corpus are numerous, and the number is a fact about how the work was divided and not about how much work was done. When two related essays are merged into one, the count falls and the content is unchanged. When one essay is divided into two, the count rises and the content is unchanged. The author has done both, and has felt each time that something happened, and what happened was a change in the knife.
+
+The prophet's contribution is short and loud: the abundance is the evidence, and the future will be unable to read it without counting. The formalist asks what unit is being counted and receives no answer, then sets out what can be said.
+
+\begin{proposition}[On the Splitting of Documents, Established]\label{prop:splitting}
+Let a body of work consist of a finite set of claims, each with its supporting argument, and let a document be any set of claims. Then for any partition of the claims into $k$ documents and any $k'\ge 1$ not exceeding the number of claims, the claims can be repartitioned into $k'$ documents without adding or removing a claim. The count of documents therefore does not determine the count of claims.
+\end{proposition}
+
+\begin{proof}
+Order the claims in any way and cut the sequence into $k'$ consecutive blocks, which is possible whenever $k'$ does not exceed the number of claims. Every claim appears in exactly one block, so none is added or removed.
+\end{proof}
+
+\begin{concession}
+The formalist grants that the result is trivial, and observes that it is the content of the author's confession in the form of a theorem. Output measured in documents is a quantity the producer can alter at will by choosing where to cut, and any rate expressed per document is, to that extent, under the producer's control. The formalist records the corollary that the repository's size is not evidence of the number of defensible results it contains, and that no unit has yet been proposed in which that number could be stated. The proposal of a unit, for instance a claim accompanied by a proof or a test that a stranger has been able to repeat, would be a useful piece of work and is not performed here.
+\end{concession}
+
+The ordinary voice, asked whether it too has mistaken proliferation for progress, says that a job is measured in rooms finished and not in sheets of drywall hung. The author notes that he has been counting sheets. The consolidation he has begun, in which related essays are merged into one extended and self-contained piece, is an attempt to count rooms, and it has the useful property that the merged essay is harder to produce than two separate ones, since the seams between the parts now have to hold.
+
+\begin{nonsupport}
+The chapter does not show that consolidation produces better work than proliferation. It shows that the count of documents, which has been the author's most visible measure, measures his decisions about division.
+\end{nonsupport}
+
+\chapter{Why My Readers Have Not Yet Been Implemented}
+
+Nietzsche complained, with evident relish, that his readers did not yet exist. The author distinguishes four kinds of reader. The first recognises the vocabulary. The second understands the formal structure. The third can reproduce the reasoning without assistance. The fourth can extend the work without destroying its constraints. The four are ordered by difficulty, and the claim that the fourth kind does not yet exist is exactly as flattering to the author as the claim that the first has not read carefully, and should be read with the corresponding scepticism.
+
+The question underneath all this is whether a theoretical framework can precede the intellectual practices required for its adequate reception. Kuhn argued that scientific communities share a body of exemplars and practices that determine what counts as a problem and a solution \cite{kuhn-structure}, and Shapin and Schaffer described how the acceptance of an experimental method required the construction of a community and a set of social conventions \cite{shapin-airpump}. These accounts suggest that the reception of a framework is not an event but a process of building the people and the institutions that can use it. The author takes the lesson and applies it with some inconsistency, since he has built very little of either.
+
+The culminating declaration of the chapter is that he has no complaint against his contemporaries. They have not failed to read him. They have merely attempted to execute a future intellectual architecture on an obsolete interpretive environment. The line is among the most satisfying in the monograph and is, to the author's regret, structurally identical to the excuse offered by every unread author in history. The formalist notes that the declaration is compatible with the work being important and compatible with the work being worthless, and that a statement compatible with both has no evidential force. The prophet is unmoved.
+
+There will be readers. I do not say this from hope, which is a sentimental organ, but from a kind of arithmetic: the quantity of confusion in the world is finite, and the quantity of people who have grown tired of it is not. They will arrive one at a time, in unlit rooms, with a cold cup beside them, having found a file named only by a date, and they will begin to read and not understand, and continue to read and not understand, and then in the third hour there will occur the small mechanical event, the click of a part seating itself in its housing, that I have been waiting for in every sentence I have written. They will say nothing to me. They will not know my name, or they will know the wrong one, which is the better arrangement. They will take the definition and use it, and the use will go further than I took it, and I will not be there, and that is the entire design. I have made a thing which works better in the hands of someone else, and there is no higher engineering than this, and no sorrow quite like it either. To such a reader I say now, across whatever interval separates us: the lemma you are stuck on is wrong as I wrote it. It is the second case. I knew when I wrote it.
+
+A better test is available and is humbler. If a framework is sound, a competent stranger should be able to take its definitions, work through its examples, and reach its results without the author's help. The author has begun to write his texts with that stranger in mind, and he has begun to supply the exercises, the worked cases, and the verification steps that such a reader would need. This is the oldest of pedagogical lessons, and he is slow to apply it because the work of making an idea teachable is quite different from the work of having it. The readers have not been implemented. Neither has the documentation.
+
+\begin{nonsupport}
+The claim that readers capable of receiving the work do not yet exist cannot be distinguished, on the evidence presented, from the claim that the work is not yet receivable. The chapter does not choose between them.
+\end{nonsupport}
+
+\chapter{Why I Cannot Be Reconstructed from My Own Archive}
+
+The author has kept an unusually complete record. Essays, code, revisions, and dated files stand in public, and a patient reader could follow nearly every change. He once supposed that a sufficiently complete archive would amount to a reconstruction, so that anyone with enough time and the files could recover what kind of person had produced them. The supposition is false, and he has the evidence for its falsity in his own possession, which is the only place such evidence can be found.
+
+Consider the paintings. He stopped taking commissions at forty-two paintings posted on a public image site, and the stopping was deliberate: the set was meant to stand as a record of a personal style from a period before image-generating models existed. The set is complete in the sense that matters to an archive, since every painting is there. What the images do not contain is how they were made. They do not record the roller, the successively smaller brushes, the arm moving from the shoulder, the speed at which several paintings an hour were completed, or the fact that a large piece was begun without any picture in mind. Two large murals, each about forty feet, exist in birthday party rooms at a trampoline park, with brushwork exposed in places and crack filler built up for texture elsewhere, and a photograph of a room forty feet long is a different object from the room. The archive is accurate and the person is absent from it.
+
+The prophet naturally has a larger claim. Let them keep the archive, he says, and let them reason from it, and let them find at the end that they have inferred a man who never lived, composed of the traces of a man who did, and let that be the best portrait. The formalist finds this evasive and supplies a statement that can be checked.
+
+\begin{proposition}[On Finite Records and Producers, Established]\label{prop:archive}
+Let $D$ be any finite set of input and output pairs. Then there exist infinitely many distinct programs, as texts, that produce exactly the outputs in $D$ on the inputs in $D$, and among them there exist programs that disagree with one another on some input outside $D$.
+\end{proposition}
+
+\begin{proof}
+Let $p$ be any program that produces the outputs in $D$. Appending $n$ no-operation statements to $p$ yields, for each $n$, a distinct text with the same behaviour, so there are infinitely many. For the second claim, let $x$ be an input not in $D$ and let $q$ be $p$ modified to return a different value on $x$ alone by a test on the input, which leaves behaviour on $D$ unchanged.
+\end{proof}
+
+\begin{concession}
+The formalist grants the proposition and notes that it concerns programs and not people, so that its application to a person is an analogy and not a theorem. The analogy is the author's, and the formalist allows it as an illustration: a finite record underdetermines its producer, and the freedom left over is both large and invisible from within the record. The formalist adds that one might hope to narrow the candidates by preferring simpler producers, and that this is a legitimate strategy and also the strategy by which a reader supplies the author with the simplest personality consistent with the files. The author has seen the result in other people's accounts of him and does not recognise it.
+\end{concession}
+
+The ordinary voice, whose evidence is a roller, remarks that a finished wall does not say how long it took, whether the person who painted it was cold, or whether the paint was meant for another job. The author accepts that a record is a thing made for readers and that the reader's picture of the maker is a fresh construction from it. The conclusion has a mild consolation. If the archive cannot recover the person, the person is not at risk of being replaced by it.
+
+\begin{nonsupport}
+The chapter has not shown that the author could not be reconstructed by any procedure from any evidence. It has shown that this archive, taken alone, leaves a great deal open, and the authority for that claim is the author's report of what is missing, which is itself unarchived.
+\end{nonsupport}
+
+\chapter*{Interlude: A Brief History of the Two Thousand Years I Have Been Obliged to Correct}
+\addcontentsline{toc}{chapter}{Interlude: A Brief History of the Two Thousand Years I Have Been Obliged to Correct}
+\markboth{Interlude}{Interlude}
+
+In the interlude the author surveys the inheritance of substance ontology, theological metaphysics, Cartesian dualism, Kantian categories, disciplinary specialisation, computational abstraction, and contemporary artificial intelligence. The scale of the undertaking is outrageous and is narrated with the composure of an ordinary literature review: two millennia in the space of a few pages, and at every turn a thinker found to have come within a sentence of a distinction that the author would later formalise.
+
+The narrator begins with Aristotle, for whom substance was the primary category and for whom a thing was the bearer of its properties and the subject of change. The doctrine has an enormous career, passing through the scholastics into the early modern period, and it supplies the grammar in which most later disputes are stated. The narrator notes with satisfaction that Aristotle's own treatment of matter and form contains the beginnings of an account in which the thing is the outcome of an organising operation, and that this account was subsequently suppressed by a century of commentary. The historian in the margin observes that the commentators were not suppressing anything and were doing their work, which was commentary.
+
+Descartes divided the world into extended and thinking substance and bequeathed to his successors the problem of their connection \cite{descartes-meditations}. Kant answered by moving the categories into the mind, so that the structure of experience was supplied by the knower and the thing in itself withdrew behind it \cite{kant-critique}. The narrator is pleased to report that both thinkers were in effect attempting to say where distinctions come from, and that neither was able to give an account of the operations by which a distinction is made and kept. The historian in the margin notes that this is a modern way of putting what Kant said at great length, and that it carries a risk of making the past into a series of early drafts of the present. That risk is the interlude's chief subject, though the narrator does not acknowledge it.
+
+The historian now permits himself one paragraph without italics. The narrator has claimed that Descartes was trying to say where distinctions come from and could not say how they are made. This is false of Descartes in a specific way. The Sixth Meditation contains an explicit and worked doctrine of distinction, in which two things are shown to be really distinct because each can be clearly and distinctly understood apart from the other, and could therefore be made to exist apart by God, and the argument for the separation of mind from body is an application of it \cite{descartes-meditations}. The narrator did not notice the doctrine, because he had decided in advance what the tradition lacked. The remark about Aristotle fails in the same way and more seriously. The narrator reads matter and form as the outcome of an organising operation, but in the \emph{Metaphysics} actuality is prior to potentiality, and an operation presupposes the form it is said to yield \cite{aristotle-metaphysics}. The narrator's reading therefore reverses the order of priority in the very passage cited for support. A retrospective construction can be harmless, but this one inverts its source, and it is recorded here as an error and not as a continuity.
+
+The interlude distinguishes actual historical continuities from retrospective constructions by marking each paragraph with a notice. A continuity is a case in which a later thinker read an earlier one and responded. A construction is a case in which the author, looking back, finds a resemblance. The great majority of the connections drawn in the interlude are of the second sort. The narrator, however, remains magnificently convinced that Western intellectual history has been preparing an extensive list of conceptual deficiencies for his eventual attention, and this conviction is the one thing the interlude is able to demonstrate, since it is visible in every line.
+
+The later episodes are shorter. The division of knowledge into disciplines in the nineteenth century gave each field a method and a vocabulary and made the crossing of boundaries more costly. The rise of formal logic and the theory of computation, from Gödel and Turing onward \cite{turing-1936}, supplied the tools for treating reasoning as a transformation of symbols, and brought with it the new puzzle of what a transformation preserves. Contemporary artificial intelligence has produced systems that generate fluent text from statistical patterns, and the narrator treats this development as a vindication of his general position and an affront to his particular one, since the systems produce plausible output with no recorded derivation, which is the failure he has been describing, and they do so on a scale that has made the failure a commercial product.
+
+The historian in the margin concludes the interlude with a short caution. Two thousand years of philosophy cannot be corrected by one person, since they are not a single error, and the word correction presupposes a standard that the corrector has not shown he possesses. The prophet, who has the last paragraph, replies that he did not say he would do it alone.
+
+\begin{nonsupport}
+The interlude has not established that any thinker in the tradition made the mistake attributed to him. It has established that the author finds the attribution convenient, and it has described its own method in terms that a historian would not accept.
+\end{nonsupport}
+
+\part{Why I Am a Destiny}
+
+\begin{center}\emph{Concerning the consequences of having begun a reconstruction that may require several centuries to finish.}\end{center}
+
+\chapter{Why Two Thousand Years Are Not Easily Corrected}
+
+This chapter is a direct response to Nietzsche's historical horizon, in which a single life is made to carry the weight of an epoch. The author examines instead the inertia of conceptual vocabularies, institutions, disciplinary divisions, and habits of inference. A vocabulary is not a list of words. It is a set of practices of use, embedded in training, in journals, in hiring decisions, and in the intuitions of people who learned to reason inside it, and a correction that leaves those practices untouched has not corrected anything.
+
+A framework may be technically available long before its methods become habitual. The distinction between publishing a theory and transforming the practices of thought through which it is evaluated becomes the principal concern. Many valuable ideas have been published and ignored for decades, and some have been rediscovered when the habits required to use them had finally formed. Mendel is the stock example, though historians dispute the usual telling. The point that survives the dispute is that reception depends on a community's readiness, and readiness is not a function of the idea's merits alone \cite{kuhn-structure}.
+
+The author's temperament inclines him to impatience, and the chapter records the conflict between that impatience and the slow time of institutions. He has chosen to publish in the public domain, directly, as work is produced, and has accepted that this choice forgoes the legitimacy that comes from review and the audience that comes from a venue. The alternative, to polish each piece for a journal, would produce fewer pieces of higher finish, and would require a patience he does not have and a deference he does not feel. The choice is a bet, and the bet is placed on the proposition that a well-organised public record will eventually be found useful by someone who needs it. The odds are not known, and the author declines to assign them.
+
+The prophetic voice announces that two thousand years are not easily corrected, and that this is the reason the correction has been entrusted to a long process in which he is a participant and not a conclusion. The formalist observes that the sentence has been rewritten to remove the claim of exclusive authorship and that nothing is lost by the revision, which suggests that the original claim was ornamental. The ordinary voice remarks that a house that has stood for a century does not fall because a visitor points out that its foundation is crooked, and that a renovation proceeds one room at a time, with the occupants still in residence.
+
+\begin{nonsupport}
+The chapter has not shown that the practices it describes as obstacles are obstacles to anything the author has produced. It has shown that the author finds them frustrating.
+\end{nonsupport}
+
+\chapter{Why Artificial Intelligence Has Arrived Just in Time to Misunderstand Me}
+
+Machines now generate explanations, compact context, manufacture synthetic consensus, and conduct automated research, and the distinction between producing an answer and preserving the evidentiary conditions that justify it has become urgent. The author describes the extraordinary historical circumstance in which machines have acquired the ability to generate interpretations of his work at a rate exceeding the ability of human beings to read them. A large language model can summarise a monograph in seconds and misattribute its central claim in the same interval, and the summary will be fluent and confident, and in the typical case there will be no record of what was dropped.
+
+The more serious argument concerns provenance, verification, epistemic dependence, and the danger of treating fluent reconstruction as faithful continuation. A system that compresses a long working session into a short summary has made decisions about what to retain, and the decisions are not recorded in the summary. The summary becomes the state from which later work proceeds, and errors introduced in compaction are inherited as though they were facts. The author's position is that working state and evidentiary record are different things, that the former may be compact and lossy and the latter may not, and that a system which confuses them has no means of correcting itself. This is an argument about engineering and also an argument about epistemology, and the author has written about it in a separate essay and will not repeat it.
+
+A particular comedy attends the situation of an author who writes about the admissibility of histories and then reads a summary of his own writing, produced by a system that has no access to the histories. The summary is usually adequate in outline, frequently wrong in the details that matter, and always delivered in the tone of a colleague who has read the whole thing. The author has taken to treating such summaries as a kind of experiment, in which the failures reveal which of his distinctions survive compression and which do not. The experiment is informal, and the results are anecdotal, and he mentions them because they are the closest thing to an empirical test of the legibility of his prose that he has been able to obtain.
+
+The author does not claim that artificial intelligence is hostile to his work or to anyone's. He claims that it is a powerful instrument for producing text that resembles understanding, and that the resemblance is a hazard precisely because it is good. The remedy is the same as in the earlier books: keep the record, make the operations auditable, and require that a conclusion be traceable to the steps that produced it. The prophetic voice says that the machines have arrived just in time to misunderstand him. The formalist observes that the machines misunderstand everyone, that this is a general property of the systems, and that the timing is not a compliment.
+
+\begin{nonsupport}
+The chapter has not shown that machine summaries of the author's work are worse than human summaries. It has not compared them. It has shown that the author, who has more experience of the former, finds them troublesome.
+\end{nonsupport}
+
+\chapter{Why I Have Outsourced My Doubts to Machines}
+
+The author has assembled an apparatus of artificial interlocutors and has set it to examine every proposition he writes. The machines are tireless, they do not tire of the same objection, and they will produce a dozen counterarguments to any claim in the time it takes to make tea. He wishes it understood that this is without precedent. No earlier thinker had a standing tribunal of objectors available at every hour, willing to attack a paragraph before the ink was dry, and the author reports that he has used it freely.
+
+\begin{quotation}\noindent Let the sceptics assemble. I have a thousand of them, and they do not sleep, and they ask me every question I was afraid to ask myself, and they ask it in the voice of a reviewer who has read everything. I have never been so doubted. A man who is doubted by a thousand tireless judges is a man who has been tested beyond the capacity of any earlier author, and I intend that my tests be remembered, and that the number be remembered, and that the number grow.
+\end{quotation}
+
+The formalist, who has been listening to the number, asks what the number counts. A thousand objections generated by systems trained on overlapping material, tuned by overlapping procedures, and prompted by the same author are not a thousand independent judgments. They are one judgment sampled a thousand times, with some variation from the sampling. The question that matters is how much the repetition adds, and a simple model gives a precise answer.
+
+\begin{proposition}[On Correlated Judges, Established]\label{prop:judges}
+Suppose a shared factor $T$, which may stand for a common tendency among the judges, takes values according to some distribution. Suppose that, given $T=t$, each of $n$ judges independently returns the correct verdict with probability $q(t)$, where $q(t)\ne \tfrac12$ for every $t$. Then as $n$ grows, the probability that the majority is correct converges to the probability that $q(T)>\tfrac12$, and this limit does not depend on $n$.
+\end{proposition}
+
+\begin{proof}
+Fix $T=t$. By the law of large numbers the proportion of correct verdicts among the $n$ judges converges to $q(t)$. If $q(t)>\tfrac12$ the majority is correct with probability tending to one, and if $q(t)<\tfrac12$ with probability tending to zero. Averaging over $T$ and applying bounded convergence gives the limit $\Pr[q(T)>\tfrac12]$.
+\end{proof}
+
+\begin{concession}
+The formalist grants the proposition under its assumptions and then states what it shows. If the judges share a factor that pushes them toward the wrong verdict for some inputs, then adding more judges does not repair the error, because the limit is set by the shared factor and not by the number. The model is a toy: real systems do not conform to a single shared variable, and conditional independence given such a variable is generous to the judges. The qualitative point survives the toy, which is that the useful quantity is the number of independent sources of error, and that the author does not know it and has no means, from inside the apparatus, of finding out. The prophet asks whether the number of independent sources might be large. The formalist says that it might, and that the proposition does not say, and that this is the difficulty.
+\end{concession}
+
+The ordinary voice offers a small parable. A carpenter who buys three tape measures from the same shop and finds that they agree has learned that the three come from one factory, and has learned nothing about whether they are accurate. The author finds the parable deflating and sound. The remedy is not to abandon the apparatus, whose objections are often good, but to treat its output as a set of leads, and to require that any claim worth keeping be checked by a method that does not share the machines' habits: a proof that a proof assistant accepts, an experiment that a stranger can repeat, a source that can be read. A doubt that has been outsourced remains a doubt, and what has been outsourced is the labour of producing it, which was never the scarce part.
+
+\begin{nonsupport}
+The chapter has not shown that the machine objections are correlated to any particular degree in the author's use. It has shown that the count of objections is not evidence of their independence, which is what the count was being used to suggest.
+\end{nonsupport}
+
+\chapter{Why I Have Founded No School}
+
+The author refuses the role of intellectual patriarch. A genuine framework should permit independent reconstruction, correction, and extension, and should not demand loyalty to its inventor. The chapter develops a pointed satire of academic schools, doctrinal succession, disciplinary prestige, and the peculiar human desire to transform methodological discoveries into institutions of personal allegiance. Schools produce disciples, disciples produce orthodoxy, and orthodoxy produces the very habits a framework was meant to dissolve. The author has seen enough of the process in other people's lives to wish to avoid it in his own.
+
+Its central paradox is that the author announces his historical indispensability while constructing an account of knowledge in which no individual is entitled to permanent epistemic privilege. The paradox is acknowledged and not resolved, and the author has considered the possibility that it is simply a contradiction. A framework in which no one has standing to settle disputes by authority needs another mechanism for settling them, and the mechanism the author prefers is the public record of claims, objections, and responses, in which a proposition is as strong as its surviving defences. He has written a specification for such a record. The specification has the advantage of making the author's own claims subject to the same treatment, and the disadvantage of requiring other people to participate.
+
+Weber's account of the routinisation of charisma is the relevant sociological background, in that the founder's authority is converted after his death into institutions whose legitimacy no longer depends on him \cite{weber-economy}. The author is attempting to skip a step by routinising before the charisma has been established, a manoeuvre with no precedent and no obvious prospects. The formalist observes that a person who announces that he has founded no school is, by the announcement, taking a position in the politics of schools, and that the position is a familiar one. The prophet replies that it was meant to be.
+
+There is an additional and entirely practical reason for the refusal. The author's time is limited and his manual work is demanding. He does not have the capacity to mentor, to referee, or to maintain a doctrine, and he knows it. What he can do is leave the work where others can find it, state clearly what it claims and where it fails, and let those who find it useful take it in directions he would not have chosen. A scattering is less glamorous than a school. It is also, as a rule, more durable, since it does not depend on anyone's survival.
+
+In another year, which the ordinary voice identifies only as the later of two, the author spent a month in Cuba as a volunteer stonemason, helping to build a kitchen in a church. The work was the fitting and setting of stone, and the kitchen required no agreement among the people building it beyond where the wall should go. The prophet proposes the episode as a model of the school that is not a school, a transmission of skill without doctrine. The formalist observes that a single month and a single kitchen are an instance and not a model. The ordinary voice says only that a wall does not remember who laid which course, that it carries its load regardless, and that this is the sense, such as it is, in which the author hopes the work will be treated.
+
+\begin{nonsupport}
+The chapter does not show that the author has founded no school. It shows that he has not intended to, and the intention is not the outcome.
+\end{nonsupport}
+
+\chapter{Why I Have Not Become What I Specified}
+
+The subtitle of this book promises that one becomes what one has already formally specified, and the author is now in a position to report on the case he knows best. He has not. He has specified a good deal, and the person who remains differs from every specification he has written, and the difference is not a defect of drafting. It is made of events that no specification contained.
+
+At twelve he found a Commodore PET beside a road. It was his first computer at home, and it arrived by accident, as the discarded property of someone he never met. Before it he had learned to program on school machines intended for spelling drills, so that his first use of computation was a use for which it had not been provided. He taught himself electronics, wiring, radios, and circuits before he touched any computer at all, and he later taught himself further on machines in a school computer room that nobody supervised. An unsupervised room is a material constraint of a kind, and so is a roadside. He has a mind that does not produce images or an inner voice, and that too he did not specify. A list of such events could be extended indefinitely, and the ordinary voice, which supplies it, ends each item with the same observation: the thing was there, and he used it.
+
+The prophet is at a loss, which is rare and which the formalist notes with some satisfaction. He recovers by declaring that a life which exceeds its specification is the more magnificent for it, and that the person who specifies and then becomes exactly what was specified is a clerk. The formalist replies that the declaration may be true, and that the book's hypothesis, restated, was a claim about specification and not about magnificence. The irony the author is obliged to record is a plain one. He has spent years constructing systems for deciding which histories are admissible, and his own biography contains more admissible histories than any specification he has written. What the framework can describe about the person is much less than what the person has gone through.
+
+\begin{proposition}[On Unique Specifications, Established]\label{prop:unique}
+Let $S$ be a specification and let the histories admissible under $S$ be those satisfying every constraint in $S$. If $S'$ is obtained from $S$ by adding constraints, then the histories admissible under $S'$ are among those admissible under $S$. If $S$ admits exactly one history $h$, and $h$ can be recovered from $S$ by a fixed procedure $f$, then the shortest description of $h$ is no longer than the length of $S$ together with the length of $f$.
+\end{proposition}
+
+\begin{proof}
+A history that satisfies every constraint of $S'$ satisfies every constraint of $S$, since the constraints of $S$ are among those of $S'$. For the second claim, the pair consisting of $S$ and $f$ is itself a description of $h$, since applying $f$ to $S$ yields $h$, and the shortest description of $h$ is no longer than any description of it.
+\end{proof}
+
+\begin{concession}
+The formalist grants both parts and records what they imply. Adding constraints narrows the admissible histories but never leaves fewer than the constraints allow, so that determination requires specifying enough to exclude all but one history. A specification that admits exactly one history is, in the sense of the second part, at least as informative as the history itself. A specification that determines a life is therefore not a plan from which the life follows but a description of the life, and the title's hypothesis, read as the claim that a short specification fixes a person, cannot hold. The formalist adds that the same result applies to every specification the author has written, none of which is a description of him.
+\end{concession}
+
+What remains is a modest, usable form of the subtitle. A specification does not fix a life, but it can remove from it some of the histories that would otherwise have been available, and the author's specifications have removed some of his. That is a smaller thing than becoming what one has specified. It is also a thing that can be observed, since the histories that were not taken leave a trace in the habits of the one who declined them.
+
+\begin{nonsupport}
+The chapter has not shown that the author's life is more open than other lives. It has shown that no specification he has written determines his, and the evidence is that he has written the specifications and lived the life, and can compare them.
+\end{nonsupport}
+
+\chapter{Why I Am Not Yet Finished}
+
+The concluding chapter treats incompletion not as an embarrassment but as a constitutive feature of inquiry. The author considers the distinction between a completed formal result, a validated empirical model, a promising research programme, and an intellectual ambition whose conditions of realisation have not yet been established. The corpus contains all four, in unequal proportions, and a competent reader can classify any given piece, and the author is sometimes unable to. The classification is a service he owes the reader and has not yet performed in full.
+
+The rhetoric becomes increasingly magnificent while the technical qualifications become increasingly exact. The prophet declares that the reconstruction of ontology is under way and that no later thinker will be able to ignore the questions now posed. The formalist replies that the reconstruction consists of a collection of definitions, a handful of proved lemmas, a larger number of conjectures, and several programmes that have not been tested, and that the use of the word reconstruction is a courtesy. The ordinary voice, which is now rather tired, mentions that the house is not finished either, that it has a roof and a floor and the rest is under way, and that a person living in an unfinished house has a clearer view of how houses are made.
+
+The author has not completed the reconstruction of knowledge, but has accomplished the considerably more inconvenient task of making certain previously comfortable forms of explanation difficult to accept without further justification. This is a modest result and the author is not certain he has achieved it, since a form of explanation that has been made uncomfortable for one reader has been made no less comfortable for the others. He has at least made it uncomfortable for himself, which is the only reader whose reactions he can observe with any confidence.
+
+\begin{nonsupport}
+The chapter does not show that the work is unfinished in a productive way. It shows that the work is unfinished, which anyone can see by opening the files.
+\end{nonsupport}
+
+\chapter*{Epilogue: Why I Am Not a Strange Loop}
+\addcontentsline{toc}{chapter}{Epilogue: Why I Am Not a Strange Loop}
+\markboth{Epilogue}{Epilogue}
+
+Nietzsche closed the preface of his autobiography with the declaration that he was not a man but dynamite \cite{nietzsche-ecce}. The narrator, searching for a sentence of equal weight, has two candidates at hand, and the second is rejected here on principle. Hofstadter proposed that a self is a pattern that arises when a symbol-manipulating system becomes rich enough to represent itself, so that the feedback between the system and its own description is what the word I picks out \cite{hofstadter-strange}. The author does not dispute that such feedback occurs, and does not dispute that it is a remarkable feature of minds. His objection is to the step from the feedback to the identity. A system can refer to itself, model itself, and recursively revise its own descriptions without thereby establishing the continuity, the provenance, or the admissibility of the history that makes it the particular system it is. The formalist is careful to add that Hofstadter does not claim that self-reference alone suffices, and that the objection is addressed to the weak reading of the thesis, which is the one that readers tend to adopt. The author accepts the correction and keeps the objection.
+
+The difficulty, which the formalist has been holding in reserve, is that this book is itself a strange loop in a perfectly ordinary sense. It examines its own claims, qualifies its own assertions, incorporates the objections to its own methods, and records the result in a running total that it then reports. The author has constructed an elaborate demonstration of the very phenomenon he claims not to exemplify. The conclusion he has reached, that recursion cannot establish who he is, is itself a recursive self-description, produced by the process it describes, and the formalist observes that it inherits the defect it announces. A narrator who spends an entire book examining himself and concludes that examination cannot settle the matter has supplied the evidence against his own conclusion. The prophet is free to announce that he has overcome the strange loop. The book supplies the proof that he has not.
+
+\begin{proposition}[On Self-Description, Established]\label{prop:selfdesc}
+Let $g$ map histories to states, with $g$ not injective, and let $d$ map states to descriptions, so that a system's self-description is a function of its state. Then the map $d\circ g$ from histories to self-descriptions is not injective.
+\end{proposition}
+
+\begin{proof}
+Since $g$ is not injective there exist distinct histories $h_1$ and $h_2$ with $g(h_1)=g(h_2)$. Then $d(g(h_1))=d(g(h_2))$, so two distinct histories receive the same self-description.
+\end{proof}
+
+\begin{concession}
+The formalist grants the proposition and notes that it applies the earlier result on state and history to self-description, with no new step. A defender of the loop may reply that the description is not a function of the present state alone but includes a record of the past. The formalist accepts the reply and observes what follows from it. A description that includes a record of the past is a record, and a record is the product of a recording process with losses of its own, as the chapters on the archive and on the chain of operations established. Either the self-description is a function of the state, in which case it does not fix the history, or it contains a record, in which case it fixes the history only as far as the recording is complete, and nothing in the loop guarantees that. The prophet asks that the formalist be reminded who is writing the epilogue. The formalist replies that the reminder is the point.
+\end{concession}
+
+The ordinary voice, meanwhile, has no difficulty at all. It identifies the person who is to return tomorrow to finish the job: the one who has the keys, who left the work half done, who is expected, and whose absence would be noticed by someone other than himself. It does not consult a self-description. It consults the work, the arrangement, and the people who depend on him arriving, and it finds an identity sustained by continuing activity and not by representation. The formalist concedes that this is an account of identity that the apparatus of the book can describe and cannot produce, and that it is probably closer to what the book has been trying to say than anything in the propositions.
+
+The formalist, asked to reconstruct the narrator from the record, produces a graph, and the narrator is permitted to read it aloud.
+
+\begin{quotation}\noindent Let them raise no statue. A statue is a distinction held in place by weight alone, and it will be dealt with by weather. Let them instead draw the graph: every claim a node, every dependence an edge, every unproved assumption marked in the colour of an unpaid bill, and let them hang it where the light is good. They will see at once what I am. I am the vertex of high degree at which the unresolved edges converge; I am the point at which, if you remove me, a great many things cease to be connected to anything. I do not say I am important. I say I am load-bearing, which is another matter, and one that any carpenter will understand: the member that carries the load is not the one that is admired, and it is discovered, if at all, when someone opens a wall. Open the wall. I have left it unpainted for the purpose.
+\end{quotation}
+
+The formalist finds the reconstruction deliberately inadequate and says so. A dependency graph is built to be acyclic, so that each node rests on others and none rests on itself, and it is the structure in which a loop is detected and forbidden. It records what depends on what and says nothing of the repairs, the accidents, the roadside, or the person who must come back tomorrow. It is a good picture of the book and a poor picture of the man. The narrator thanks the formalist for the review and does not withdraw the paragraph, which is load-bearing in the sense that he has said.
+
+If the author is permitted a single achievement, it is the apparatus that has grown through this book in step with the voice that announces it. As the prophet became more magnificent the formalist became more exact, and the two did not cancel but compounded, until the largest claims in the history of the work stand beside the most careful inventory of their deficiencies ever attached to them. The supreme achievement of the narrator is thus revealed to be the construction of a device capable of demonstrating, with some precision, how little his supreme achievement has yet established. The author cannot decide whether this is a triumph or a very elaborate way of saying that he has not finished. The device does not decide it either, and it has registered the indecision, as it registers everything, in the record. The formalist adds that the three voices have by now begun to borrow one another's registers, that the ordinary voice has twice spoken in the prophet's cadence and the prophet once in the formalist's, and that the author, having set out to keep them apart as the experimental condition, takes the merging to be the one finding the experiment produced.
+
+The hypothesis of the monograph was that a person becomes what he has already formally specified. The reader may now be in a position to say whether the hypothesis has been supported. It has not. The author has specified a great deal, and the specifications have been unevenly implemented, and the person who remains is a combination of what he specified, what he failed to specify, and what happened to him on the way, including a number of repairs. The question the book leaves is whether the self is constituted by recursive self-description, or whether recursive self-description merely produces one more event in a history whose identity cannot be recovered from the description alone. The author inclines to the second, and notes that the inclination is itself a description, offered from inside. The title therefore stands as a hypothesis, restated for the final time, and unsupported.
+
+\begin{nonsupport}
+The monograph has not shown that its author is a strange loop, a man, or dynamite. It has shown that he can write a sentence to that effect and attach a bibliography.
+\end{nonsupport}
+
+\appendix
+\chapter{Unresolved Obligations}
+
+The statements of non-support, which accumulate across the book, number \thenonsupport{} at this point, and the propositions, which do not, are treated here one by one. Each of the unestablished propositions in the main text is accompanied by the task that would be required to convert it from a declaration into a result, and the established ones are noted as such. The tasks are stated in the order in which the propositions appear, and the author has not attempted to rank them by difficulty, on the ground that the ranking would be one more unverified claim.
+
+Proposition~\ref{prop:boundary} requires a survey of the objects the author's ontology admits and, for each, a recorded boundary-drawing operation. The survey has not been conducted. Proposition~\ref{prop:roof} requires an account of the sense in which repair and ontology are one discipline, with a criterion that excludes cases in which the resemblance is merely verbal. No criterion has been proposed. Proposition~\ref{prop:adm} requires a specification of the class of transformations relative to which admissibility is defined, together with a demonstration that different choices of the class do not trivialise the notion. Proposition~\ref{prop:history} requires a theory of persons or a decision to restrict the claim to engineered systems. Proposition~\ref{prop:writing} requires a comparison between essays composed under constraint and essays composed otherwise, evaluated by a procedure the author does not control. Proposition~\ref{prop:modesty} requires a measure of modesty, which is unlikely to be available, and may be discharged by deletion.
+
+Propositions~\ref{prop:faithful}, \ref{prop:state}, and~\ref{prop:capacity} have proofs that succeed under their stated assumptions. Their obligations are of a different kind: to say what they leave unsaid. The later propositions on the decay of originality, the denominator of a record, the splitting of documents, finite records, correlated judges, unique specifications, and self-description likewise have proofs that succeed under their stated assumptions, and the concession after each states what it leaves open. The first leaves open which classes of transformation are worth requiring. The second leaves open which history is the correct one. The third leaves open the coupling among the fields, without which it concerns no physics in particular.
+
+Beyond the propositions there are obligations attached to the frameworks. The RSVP fields must be matched to measurable quantities and the resulting predictions compared with observation. SpherePOP requires a proof of the properties asserted for its reduction rules, and a statement of which of its claimed advantages are advantages of a notation and which are advantages of a computation. The public claim record requires a pilot with participants other than its author. None of these has been completed, and the author lists them here because he wishes the reader to see them before the reader is shown anything else.
+
+\chapter{Readings of the Title Considered and Rejected}
+
+The title has been read in several ways, and each has been set aside, for reasons that the author regards as instructive. On the first reading, one becomes what one has formally specified in the sense that the specification causes the outcome. This is implausible, since a specification is a text and texts do not cause houses to be built. On the second reading, one becomes what one specified in the sense that one's later actions are shaped by the vocabulary one has adopted. This is plausible and weak. On the third, the specification is a retrospective description of what one was already becoming, in which case the title is an inversion of the causal order, and the inversion is the joke. On the fourth, the title describes a method: specify first, then become what the specification permits. This is a recommendation and not a hypothesis, and the author declines to make it, since he has not followed it himself.
+
+On a fifth reading, which the author finds the most interesting and has not defended, a specification does not cause the person but is the condition under which the person's history can be audited, and to be formally specified is a name for being auditable. This reading makes no causal claim, and it is the one the apparatus of the book can most nearly support. The author is content to leave the title ambiguous among the five, and notes that Nietzsche's own subtitle, in the genre on which this one is modelled, was a similarly compressed injunction concerning the process of becoming what one is \cite{nietzsche-ecce}. The compression is a convention of the form and is not an argument. It has been retained in the present work for the same reason that the dagger is retained in some printed editions of scholarly texts, as a mark that a passage has been touched by a convention and is not to be read as plain assertion.
+
+\chapter{A Small Experiment That Worked}
+
+The following program was run with Python 3 and produced the output reported in the chapter on history. It is reproduced in full so that the reader may run it and obtain the same output, and the reader is invited to break it.
+
+\begin{verbatim}
+import hashlib, json
+
+GENESIS = "0" * 64
+
+def link(prev, op):
+    return hashlib.sha256((prev + json.dumps(op, sort_keys=True)).encode()).hexdigest()
+
+def replay(ops):
+    state, head = 0, GENESIS
+    for op in ops:
+        if op["kind"] == "add":
+            state += op["n"]
+        elif op["kind"] == "sub":
+            state -= op["n"]
+        head = link(head, op)
+    return state, head
+
+h1 = [{"kind": "add", "n": 5}, {"kind": "add", "n": 3}]
+h2 = [{"kind": "add", "n": 10}, {"kind": "sub", "n": 2}]
+
+s1, c1 = replay(h1)
+s2, c2 = replay(h2)
+print("states equal:", s1 == s2, s1, s2)
+print("chain heads equal:", c1 == c2)
+
+# determinism: replay repeatedly
+runs = {replay(h2)[1] for _ in range(1000)}
+print("distinct heads over 1000 replays:", len(runs))
+
+# tamper detection: alter one operation in the middle of a longer history
+long_h = [{"kind": "add", "n": i} for i in range(1, 101)]
+_, head_ok = replay(long_h)
+detected = 0
+for i in range(len(long_h)):
+    t = [dict(op) for op in long_h]
+    t[i]["n"] += 1
+    if replay(t)[1] != head_ok:
+        detected += 1
+print("single-operation alterations tried:", len(long_h), "detected:", detected)
+
+# reordering: same operations, different order, same state
+r = list(reversed(long_h))
+sr, hr = replay(r)
+so, ho = replay(long_h)
+print("reordered: state equal:", sr == so, "head equal:", hr == ho)
+\end{verbatim}
+
+The output of the program, as obtained by the author and by the formalist, was as follows.
+
+\begin{verbatim}
+states equal: True 8 8
+chain heads equal: False
+distinct heads over 1000 replays: 1
+single-operation alterations tried: 100 detected: 100
+reordered: state equal: True head equal: False
+\end{verbatim}
+
+\begin{thebibliography}{99}
+
+\bibitem{aristotle-metaphysics} Aristotle. \emph{Metaphysics}. Translated by W. D. Ross. In \emph{The Basic Works of Aristotle}, edited by Richard McKeon. New York: Random House, 1941.
+
+\bibitem{descartes-meditations} Descartes, Ren\'e. \emph{Meditations on First Philosophy}. Cambridge: Cambridge University Press, 1996. Originally published 1641.
+
+\bibitem{dennett-consciousness} Dennett, Daniel C. \emph{Consciousness Explained}. Boston: Little, Brown, 1991.
+
+\bibitem{feyerabend-method} Feyerabend, Paul. \emph{Against Method: Outline of an Anarchistic Theory of Knowledge}. London: New Left Books, 1975.
+
+\bibitem{galton-imagery} Galton, Francis. ``Statistics of Mental Imagery.'' \emph{Mind} 5 (1880): 301--318.
+
+\bibitem{hofstadter-strange} Hofstadter, Douglas R. \emph{I Am a Strange Loop}. New York: Basic Books, 2007.
+
+\bibitem{kant-critique} Kant, Immanuel. \emph{Critique of Pure Reason}. Translated by Paul Guyer and Allen W. Wood. Cambridge: Cambridge University Press, 1998. Originally published 1781.
+
+\bibitem{kuhn-structure} Kuhn, Thomas S. \emph{The Structure of Scientific Revolutions}. Chicago: University of Chicago Press, 1962.
+
+\bibitem{lakatos-proofs} Lakatos, Imre. \emph{Proofs and Refutations: The Logic of Mathematical Discovery}. Cambridge: Cambridge University Press, 1976.
+
+\bibitem{lawvere-etcs} Lawvere, F. William. ``An Elementary Theory of the Category of Sets.'' \emph{Proceedings of the National Academy of Sciences of the United States of America} 52 (1964): 1506--1511.
+
+\bibitem{maclane-categories} Mac Lane, Saunders. \emph{Categories for the Working Mathematician}. New York: Springer, 1971.
+
+\bibitem{nietzsche-ecce} Nietzsche, Friedrich. \emph{Ecce Homo: How One Becomes What One Is}. Translated by Walter Kaufmann. New York: Vintage Books, 1967. Written 1888.
+
+\bibitem{nietzsche-genealogy} Nietzsche, Friedrich. \emph{On the Genealogy of Morality}. Translated by Maudemarie Clark and Alan J. Swensen. Indianapolis: Hackett, 1998. Originally published 1887.
+
+\bibitem{parfit-reasons} Parfit, Derek. \emph{Reasons and Persons}. Oxford: Oxford University Press, 1984.
+
+\bibitem{polanyi-personal} Polanyi, Michael. \emph{Personal Knowledge: Towards a Post-Critical Philosophy}. Chicago: University of Chicago Press, 1958.
+
+\bibitem{popper-logic} Popper, Karl R. \emph{The Logic of Scientific Discovery}. London: Hutchinson, 1959.
+
+\bibitem{quine-onwhat} Quine, Willard Van Orman. ``On What There Is.'' \emph{Review of Metaphysics} 2, no. 5 (1948): 21--38.
+
+\bibitem{shapin-airpump} Shapin, Steven, and Simon Schaffer. \emph{Leviathan and the Air-Pump: Hobbes, Boyle, and the Experimental Life}. Princeton: Princeton University Press, 1985.
+
+\bibitem{spencerbrown-laws} Spencer-Brown, George. \emph{Laws of Form}. London: George Allen and Unwin, 1969.
+
+\bibitem{turing-1936} Turing, Alan M. ``On Computable Numbers, with an Application to the Entscheidungsproblem.'' \emph{Proceedings of the London Mathematical Society}, series 2, 42 (1936): 230--265.
+
+\bibitem{weber-economy} Weber, Max. \emph{Economy and Society: An Outline of Interpretive Sociology}. Edited by Guenther Roth and Claus Wittich. Berkeley: University of California Press, 1978.
+
+\bibitem{whitehead-process} Whitehead, Alfred North. \emph{Process and Reality: An Essay in Cosmology}. New York: Macmillan, 1929.
+
+\bibitem{wittgenstein-investigations} Wittgenstein, Ludwig. \emph{Philosophical Investigations}. Translated by G. E. M. Anscombe. Oxford: Basil Blackwell, 1953.
+
+\bibitem{zeman-imagery} Zeman, Adam, Michaela Dewar, and Sergio Della Sala. ``Lives without Imagery: Congenital Aphantasia.'' \emph{Cortex} 73 (2015): 378--380.
+
+\end{thebibliography}
+
+\end{document}
